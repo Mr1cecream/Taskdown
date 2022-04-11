@@ -1,0 +1,1 @@
+C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Taskdown.UWP.csproj;x86
