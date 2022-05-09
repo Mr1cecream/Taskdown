@@ -21,3 +21,4 @@ C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstan
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.csproj.CopyComplete
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.dll
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.pdb
+C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig

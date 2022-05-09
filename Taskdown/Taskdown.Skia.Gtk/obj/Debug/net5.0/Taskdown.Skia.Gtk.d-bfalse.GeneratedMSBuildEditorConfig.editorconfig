@@ -18,7 +18,7 @@ build_property.UnoUISourceGeneratorDebuggerBreak =
 build_property.IsHotReloadHost = 
 build_property.UseWPF = 
 build_property.IsUnoHead = true
-build_property.UnoRemoteControlPort = 49945
+build_property.UnoRemoteControlPort = 65226
 build_property.UnoRemoteControlHost = 
 build_property.UnoRemoteControlProcessorsPath = C:\Users\guy\.nuget\packages\uno.ui.remotecontrol\4.1.9\buildTransitive\../tools/rc/processors
 build_property.TSBindingsPath = 
@@ -44,11 +44,29 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.ProjectDir = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Gtk\
 
+[C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/AppPage.xaml]
+build_metadata.AdditionalFiles.SourceItemGroup = Page
+build_metadata.AdditionalFiles.Link = AppPage.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\AppPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\AppPage.xaml
+
+[C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/ListPage.xaml]
+build_metadata.AdditionalFiles.SourceItemGroup = Page
+build_metadata.AdditionalFiles.Link = ListPage.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\ListPage.xaml
+build_metadata.AdditionalFiles.Identity = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\ListPage.xaml
+
 [C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/MainPage.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = MainPage.xaml
 build_metadata.AdditionalFiles.FullPath = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\MainPage.xaml
 build_metadata.AdditionalFiles.Identity = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\MainPage.xaml
+
+[C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/SidePanel.xaml]
+build_metadata.AdditionalFiles.SourceItemGroup = Page
+build_metadata.AdditionalFiles.Link = SidePanel.xaml
+build_metadata.AdditionalFiles.FullPath = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\SidePanel.xaml
+build_metadata.AdditionalFiles.Identity = C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\SidePanel.xaml
 
 [C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/App.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = ApplicationDefinition

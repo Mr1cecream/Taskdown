@@ -731,3 +731,6 @@ C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Droid\obj\Debug\120\stamp\
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Droid\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Droid\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Droid\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Droid\obj\Debug\120\android\src\crc64a0c4eb7506c4a04c\AppPage.java
+C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Droid\obj\Debug\120\android\src\crc64a0c4eb7506c4a04c\ListPage.java
+C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Droid\obj\Debug\120\android\src\crc64a0c4eb7506c4a04c\SidePanel.java

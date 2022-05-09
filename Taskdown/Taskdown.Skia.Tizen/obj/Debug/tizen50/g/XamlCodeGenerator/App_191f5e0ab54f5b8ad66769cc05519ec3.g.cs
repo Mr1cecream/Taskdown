@@ -73,6 +73,20 @@ namespace Taskdown
 			{
 			}
 			);
+			Resources[
+			"PanelBackground"
+			] = 
+			new global::Windows.UI.Xaml.Media.SolidColorBrush
+			{
+				Color = global::Windows.UI.Colors.SlateGray/* Windows.UI.Color/, SlateGray, SolidColorBrush/Color */,
+				// Source ..\..\..\..\..\..\..\Taskdown.Shared\App.xaml (Line 14:14)
+			}
+			.App_191f5e0ab54f5b8ad66769cc05519ec3_XamlApply((App_191f5e0ab54f5b8ad66769cc05519ec3XamlApplyExtensions.XamlApplyHandler0)(c1 => 
+			{
+				// x:Name PanelBackground
+			}
+			))
+			;
 			// Source ..\..\..\..\..\..\..\Taskdown.Shared\App.xaml (Line 1:2)
 		}
 
@@ -82,5 +96,12 @@ namespace Taskdown.Skia.Tizen
 {
 	static class App_191f5e0ab54f5b8ad66769cc05519ec3XamlApplyExtensions
 	{
+		public delegate void XamlApplyHandler0(global::Windows.UI.Xaml.Media.SolidColorBrush instance);
+		[System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+		public static global::Windows.UI.Xaml.Media.SolidColorBrush App_191f5e0ab54f5b8ad66769cc05519ec3_XamlApply(this global::Windows.UI.Xaml.Media.SolidColorBrush instance, XamlApplyHandler0 handler)
+		{
+			handler(instance);
+			return instance;
+		}
 	}
 }

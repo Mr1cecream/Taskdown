@@ -80,3 +80,4 @@ C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf.Host\obj\Debug\ne
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf.Host\obj\Debug\netcoreapp3.1\Taskdown.Skia.Wpf.Host.dll
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf.Host\obj\Debug\netcoreapp3.1\Taskdown.Skia.Wpf.Host.pdb
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf.Host\obj\Debug\netcoreapp3.1\Taskdown.Skia.Wpf.Host.genruntimeconfig.cache
+C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf.Host\obj\Debug\netcoreapp3.1\Taskdown.Skia.Wpf.Host.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig

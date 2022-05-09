@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="Taskdown.AppPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Taskdown"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Frame x:Name="SidePanelFrame"/>
+
+        <Frame x:Name="AppFrame" Grid.Column="1"/>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MinWidth="280" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Page>

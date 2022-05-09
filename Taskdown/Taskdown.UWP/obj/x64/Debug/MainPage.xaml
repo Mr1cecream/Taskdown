@@ -8,13 +8,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-      <TextBlock Text="Hello, world!" Margin="20" FontSize="30" />
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="5*" />
-        </Grid.ColumnDefinitions>
-    </Grid>
+    <Frame x:ConnectionId='2' x:Name="TopFrame"/>
 </Page>
 

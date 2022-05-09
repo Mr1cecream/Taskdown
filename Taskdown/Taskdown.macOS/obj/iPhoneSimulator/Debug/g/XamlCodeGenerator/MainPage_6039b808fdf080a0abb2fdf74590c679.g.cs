@@ -57,53 +57,38 @@ namespace Taskdown
 			base.IsParsing = true;
 			// Source ..\..\..\..\..\..\..\Taskdown.Shared\MainPage.xaml (Line 1:2)
 			base.Content = 
-			new global::Windows.UI.Xaml.Controls.Grid
+			new global::Windows.UI.Xaml.Controls.Frame
 			{
 				IsParsing = true,
+				Name = "TopFrame",
 				// Source ..\..\..\..\..\..\..\Taskdown.Shared\MainPage.xaml (Line 11:6)
-				Children = 
-				{
-					new global::Windows.UI.Xaml.Controls.TextBlock
-					{
-						IsParsing = true,
-						Text = "Hello, world!"/* string/, Hello, world!, TextBlock/Text */,
-						Margin = new global::Windows.UI.Xaml.Thickness(20)/* Windows.UI.Xaml.Thickness/, 20, TextBlock/Margin */,
-						FontSize = 30d/* double/, 30, TextBlock/FontSize */,
-						// Source ..\..\..\..\..\..\..\Taskdown.Shared\MainPage.xaml (Line 12:8)
-					}
-					.MainPage_6039b808fdf080a0abb2fdf74590c679_XamlApply((MainPage_6039b808fdf080a0abb2fdf74590c679XamlApplyExtensions.XamlApplyHandler0)(c0 => 
-					{
-						global::Uno.UI.FrameworkElementHelper.SetBaseUri(c0, "file:///C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/MainPage.xaml");
-						c0.CreationComplete();
-					}
-					))
-					,
-				}
 			}
-			.MainPage_6039b808fdf080a0abb2fdf74590c679_XamlApply((MainPage_6039b808fdf080a0abb2fdf74590c679XamlApplyExtensions.XamlApplyHandler1)(c1 => 
+			.MainPage_6039b808fdf080a0abb2fdf74590c679_XamlApply((MainPage_6039b808fdf080a0abb2fdf74590c679XamlApplyExtensions.XamlApplyHandler0)(c0 => 
 			{
-				global::Uno.UI.FrameworkElementHelper.SetBaseUri(c1, "file:///C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/MainPage.xaml");
-				c1.CreationComplete();
+				nameScope.RegisterName("TopFrame", c0);
+				this.TopFrame = c0;
+				global::Uno.UI.FrameworkElementHelper.SetBaseUri(c0, "file:///C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/MainPage.xaml");
+				c0.CreationComplete();
 			}
 			))
 			;
 			
 			this
-			.GenericApply((c2 => 
+			.GenericApply((c1 => 
 			{
 				// Source C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\MainPage.xaml (Line 1:2)
 				
-				// WARNING Property c2.base does not exist on {http://schemas.microsoft.com/winfx/2006/xaml/presentation}Page, the namespace is http://www.w3.org/XML/1998/namespace. This error was considered irrelevant by the XamlFileGenerator
+				// WARNING Property c1.base does not exist on {http://schemas.microsoft.com/winfx/2006/xaml/presentation}Page, the namespace is http://www.w3.org/XML/1998/namespace. This error was considered irrelevant by the XamlFileGenerator
 			}
 			))
-			.GenericApply((c3 => 
+			.GenericApply((c2 => 
 			{
 				// Class Taskdown.MainPage
-				global::Uno.UI.ResourceResolverSingleton.Instance.ApplyResource(c3, global::Windows.UI.Xaml.Controls.Page.BackgroundProperty, "ApplicationPageBackgroundThemeBrush", isThemeResourceExtension: true, isHotReloadSupported: true, context: global::Taskdown.macOS.GlobalStaticResources.__ParseContext_);
+				global::Uno.UI.ResourceResolverSingleton.Instance.ApplyResource(c2, global::Windows.UI.Xaml.Controls.Page.BackgroundProperty, "ApplicationPageBackgroundThemeBrush", isThemeResourceExtension: true, isHotReloadSupported: true, context: global::Taskdown.macOS.GlobalStaticResources.__ParseContext_);
 				/* _isTopLevelDictionary:False */
-				this._component_0 = c3;
-				global::Uno.UI.FrameworkElementHelper.SetBaseUri(c3, "file:///C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/MainPage.xaml");
-				c3.CreationComplete();
+				this._component_0 = c2;
+				global::Uno.UI.FrameworkElementHelper.SetBaseUri(c2, "file:///C:/Users/guy/dev/cs_school/Taskdown/Taskdown/Taskdown.Shared/MainPage.xaml");
+				c2.CreationComplete();
 			}
 			))
 			;
@@ -117,6 +102,18 @@ namespace Taskdown
 			;
 		}
 		partial void OnInitializeCompleted();
+		private global::Windows.UI.Xaml.Data.ElementNameSubject _TopFrameSubject = new global::Windows.UI.Xaml.Data.ElementNameSubject();
+		private global::Windows.UI.Xaml.Controls.Frame TopFrame
+		{
+			get
+			{
+				return (global::Windows.UI.Xaml.Controls.Frame)_TopFrameSubject.ElementInstance;
+			}
+			set
+			{
+				_TopFrameSubject.ElementInstance = value;
+			}
+		}
 		private global::Windows.UI.Xaml.Markup.ComponentHolder _component_0_Holder = new global::Windows.UI.Xaml.Markup.ComponentHolder(isWeak: true);
 		private global::Windows.UI.Xaml.Controls.Page _component_0
 		{
@@ -175,16 +172,9 @@ namespace Taskdown.macOS
 {
 	static class MainPage_6039b808fdf080a0abb2fdf74590c679XamlApplyExtensions
 	{
-		public delegate void XamlApplyHandler0(global::Windows.UI.Xaml.Controls.TextBlock instance);
+		public delegate void XamlApplyHandler0(global::Windows.UI.Xaml.Controls.Frame instance);
 		[System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-		public static global::Windows.UI.Xaml.Controls.TextBlock MainPage_6039b808fdf080a0abb2fdf74590c679_XamlApply(this global::Windows.UI.Xaml.Controls.TextBlock instance, XamlApplyHandler0 handler)
-		{
-			handler(instance);
-			return instance;
-		}
-		public delegate void XamlApplyHandler1(global::Windows.UI.Xaml.Controls.Grid instance);
-		[System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-		public static global::Windows.UI.Xaml.Controls.Grid MainPage_6039b808fdf080a0abb2fdf74590c679_XamlApply(this global::Windows.UI.Xaml.Controls.Grid instance, XamlApplyHandler1 handler)
+		public static global::Windows.UI.Xaml.Controls.Frame MainPage_6039b808fdf080a0abb2fdf74590c679_XamlApply(this global::Windows.UI.Xaml.Controls.Frame instance, XamlApplyHandler0 handler)
 		{
 			handler(instance);
 			return instance;

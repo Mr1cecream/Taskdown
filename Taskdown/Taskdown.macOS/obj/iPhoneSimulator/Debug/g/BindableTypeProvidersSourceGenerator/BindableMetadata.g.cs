@@ -24825,12 +24825,74 @@ namespace Taskdown.macOS
 	}
 
 	/// <summary>
-	/// Builder for Taskdown.MainPage
+	/// Builder for Taskdown.AppPage
 	/// </summary>
 	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
 	static class MetadataBuilder_644
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(391, typeof(global::Taskdown.AppPage));
+			MetadataBuilder_330.Build(bindableType); // global::Windows.UI.Xaml.Controls.Page
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Taskdown.AppPage();
+	}
+
+	/// <summary>
+	/// Builder for Taskdown.ListPage
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_645
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(391, typeof(global::Taskdown.ListPage));
+			MetadataBuilder_330.Build(bindableType); // global::Windows.UI.Xaml.Controls.Page
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Taskdown.ListPage();
+	}
+
+	/// <summary>
+	/// Builder for Taskdown.MainPage
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_646
 	{
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
@@ -24855,12 +24917,43 @@ namespace Taskdown.macOS
 		private static object CreateInstance() => new global::Taskdown.MainPage();
 	}
 
+	/// <summary>
+	/// Builder for Taskdown.SidePanel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_647
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(391, typeof(global::Taskdown.SidePanel));
+			MetadataBuilder_330.Build(bindableType); // global::Windows.UI.Xaml.Controls.Page
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Taskdown.SidePanel();
+	}
+
 	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
 	public class BindableMetadataProvider : global::Uno.UI.DataBinding.IBindableMetadataProvider
 	{
-		static global::System.Collections.Hashtable _bindableTypeCacheByFullName = new global::System.Collections.Hashtable(630);
+		static global::System.Collections.Hashtable _bindableTypeCacheByFullName = new global::System.Collections.Hashtable(633);
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
@@ -25522,6 +25615,9 @@ namespace Taskdown.macOS
 		private global::Uno.UI.DataBinding.IBindableType _bindableType642;
 		private global::Uno.UI.DataBinding.IBindableType _bindableType643;
 		private global::Uno.UI.DataBinding.IBindableType _bindableType644;
+		private global::Uno.UI.DataBinding.IBindableType _bindableType645;
+		private global::Uno.UI.DataBinding.IBindableType _bindableType646;
+		private global::Uno.UI.DataBinding.IBindableType _bindableType647;
 		public global::Uno.UI.DataBinding.IBindableType GetBindableTypeByFullName(string fullName)
 		{
 			switch(fullName)
@@ -29390,12 +29486,30 @@ namespace Taskdown.macOS
 					_bindableType643 = MetadataBuilder_643.Build();
 				}
 				return _bindableType643;
-				case "Taskdown.MainPage":
+				case "Taskdown.AppPage":
 				if(_bindableType644 == null)
 				{
 					_bindableType644 = MetadataBuilder_644.Build();
 				}
 				return _bindableType644;
+				case "Taskdown.ListPage":
+				if(_bindableType645 == null)
+				{
+					_bindableType645 = MetadataBuilder_645.Build();
+				}
+				return _bindableType645;
+				case "Taskdown.MainPage":
+				if(_bindableType646 == null)
+				{
+					_bindableType646 = MetadataBuilder_646.Build();
+				}
+				return _bindableType646;
+				case "Taskdown.SidePanel":
+				if(_bindableType647 == null)
+				{
+					_bindableType647 = MetadataBuilder_647.Build();
+				}
+				return _bindableType647;
 				default:
 				return null;
 			}

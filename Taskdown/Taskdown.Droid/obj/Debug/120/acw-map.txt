@@ -1,6 +1,15 @@
+Taskdown.AppPage, Taskdown.Droid;crc64a0c4eb7506c4a04c.AppPage
+Taskdown.AppPage;crc64a0c4eb7506c4a04c.AppPage
+taskdown.AppPage;crc64a0c4eb7506c4a04c.AppPage
+Taskdown.ListPage, Taskdown.Droid;crc64a0c4eb7506c4a04c.ListPage
+Taskdown.ListPage;crc64a0c4eb7506c4a04c.ListPage
+taskdown.ListPage;crc64a0c4eb7506c4a04c.ListPage
 Taskdown.MainPage, Taskdown.Droid;crc64a0c4eb7506c4a04c.MainPage
 Taskdown.MainPage;crc64a0c4eb7506c4a04c.MainPage
 taskdown.MainPage;crc64a0c4eb7506c4a04c.MainPage
+Taskdown.SidePanel, Taskdown.Droid;crc64a0c4eb7506c4a04c.SidePanel
+Taskdown.SidePanel;crc64a0c4eb7506c4a04c.SidePanel
+taskdown.SidePanel;crc64a0c4eb7506c4a04c.SidePanel
 Taskdown.Droid.MainActivity, Taskdown.Droid;crc648e0b061d54e54bbb.MainActivity
 Taskdown.Droid.MainActivity;crc648e0b061d54e54bbb.MainActivity
 taskdown.droid.MainActivity;crc648e0b061d54e54bbb.MainActivity

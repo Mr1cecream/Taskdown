@@ -136,11 +136,11 @@
     </Reference>
     <Reference URI="bin%2FTaskdown.Skia.Tizen.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>fUGm3zO1bTUYCgfcncfNFQPZIh4prJHRbs/MifHypaVjvO09w4DuzgkRwzRljGFxaGGD009jm1sqONlEQ/Qy3Q==</DigestValue>
+      <DigestValue>W2lOTWZMLzrAJRWco0JR1tahjuSRKNFM2JUgsJFXLECId4sLkC76bFENApoSzaYvAp1dIS9DW3Id8G5FgPPMGA==</DigestValue>
     </Reference>
     <Reference URI="bin%2FTaskdown.Skia.Tizen.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>hZQezJkMoA7t9mLHosYP1KxgI8qEKndNCI7P/Hs2VblYrzFNZWUsbAsF3MEQ6OzrgZFjP+8e1XtalrSGX8h6Lg==</DigestValue>
+      <DigestValue>PkhiVxHVOi2QxO9WhrW09dApWKNVRhVHcXLNQpXJHXVXmydu5SS8KCgNHyG6gghUccZ/X+mzn+OGepkOSHmW9Q==</DigestValue>
     </Reference>
     <Reference URI="bin%2FSystem.Text.Json.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
@@ -268,7 +268,7 @@
     </Reference>
     <Reference URI="author-signature.xml">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>+3iV/j6f7NAPNAbsIgOAwIpf3/d0uX3HBr4w8UJGqvmDp59pNQnd03kWTnioUUXJv1rQdMDHrLLcGIdXoTSHeQ==</DigestValue>
+      <DigestValue>X24n+IapooURZRDTlaf1Hf4Fo2k2K+dhwuZ9wfx6AEVMb06yGHUjFXYAN7+9Bx0DIvgjWyMgCUbnNuVlC3sAQw==</DigestValue>
     </Reference>
     <Reference URI="#prop">
       <Transforms>
@@ -279,9 +279,9 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-hhgwiNfr8MaK4picG5IPukXST8D0BaHLQrmAhWqAR3ociO5El1g9kR3SmsX36zZZfsCc7TSumHaR
-0/6dPmRmltML621WaspLsckgfXSJXGR8I6WGenf4x0v27OkkVzGmFR61yzSWJnS5pSbkjjmpZ/BX
-B+Nw9v2OcCrIG1MnBLk=
+jmMTiQ0itNjhIUr6kl2KUq3lpWO1rHyRemWAGqnS3z/vcA64pIA0i66PIbf9dmqFrmSEKoHqsnoT
+NvRfH6+2kjH8cPRZB44ro2KrYFk84yycCAMvk9r0WzUEKDd/mVho6aRc8BaSnYwmpEyyhsTzpdPu
+hNDacs0Sgrhz1m8E38A=
 </SignatureValue>
   <KeyInfo>
     <X509Data>
