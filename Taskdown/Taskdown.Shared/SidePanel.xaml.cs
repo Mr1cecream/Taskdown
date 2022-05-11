@@ -22,22 +22,16 @@ namespace Taskdown
     /// </summary>
     public sealed partial class SidePanel : Page
     {
-        private AppPage _appPage;
         public SidePanel()
         {
             this.InitializeComponent();
-        }
-        public SidePanel(AppPage appPage)
-        {
-            this.InitializeComponent();
-            this._appPage = appPage;
+            PageReferences.SidePanel = this;
         }
 
         public void ListSelected(object sender, RoutedEventArgs e)
         {
-            if (!(sender is TextBlock)) return;
-            var uielement = sender as TextBlock;
-            _appPage.ListSelected(uielement.Text);
+            var li = Lists.SelectedItem as ListViewItem;
+            PageReferences.AppPage.ListSelected(li.Content.ToString());
         }
 
         public void Quit(object sender, RoutedEventArgs e)

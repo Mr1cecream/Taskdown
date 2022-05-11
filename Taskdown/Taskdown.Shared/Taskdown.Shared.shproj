@@ -12,12 +12,15 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.CSharp.targets" />
   <ItemGroup>
     <_Globbed_Compile Remove="AppPage.xaml.cs" />
+    <_Globbed_Compile Remove="AppView.xaml.cs" />
     <_Globbed_Compile Remove="BlankPage1.xaml.cs" />
     <_Globbed_Compile Remove="ListPage.xaml.cs" />
+    <_Globbed_Compile Remove="PageReferences.cs" />
     <_Globbed_Compile Remove="SidePanel.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <_Globbled_Page Remove="AppPage.xaml" />
+    <_Globbled_Page Remove="AppView.xaml" />
     <_Globbled_Page Remove="BlankPage1.xaml" />
     <_Globbled_Page Remove="ListPage.xaml" />
     <_Globbled_Page Remove="SidePanel.xaml" />

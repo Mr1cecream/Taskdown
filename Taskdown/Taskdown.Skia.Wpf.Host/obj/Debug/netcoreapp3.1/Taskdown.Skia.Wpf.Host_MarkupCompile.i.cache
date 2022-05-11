@@ -4,17 +4,17 @@
 exe
 C#
 .cs
-C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf.Host\obj\Debug\netcoreapp3.1\
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf.Host\obj\Debug\netcoreapp3.1\
 Taskdown.Skia.Wpf.Host
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;UNO_REFERENCE_API;HAS_UNO_SKIA;HAS_UNO_SKIA_WPF;UNO_REFERENCE_API;HAS_UNO_SKIA;HAS_UNO_SKIA_WPF;HAS_UNO;UNO_HAS_FRAMEWORKELEMENT_MEASUREOVERRIDE;UNO_HAS_NO_IDEPENDENCYOBJECT;UNO_REFERENCE_API
-C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf.Host\App.xaml
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf.Host\App.xaml
 11407045341
 1-809296145
 9-32133030
-230-2045791569
+2301310432571
 MainWindow.xaml;
 
-False
+True
 

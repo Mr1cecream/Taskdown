@@ -3802,23 +3802,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\guy\\.nuget\\packages\\": {},
+    "C:\\Users\\Guy\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.Skia.Wpf.Host\\Taskdown.Skia.Wpf.Host.csproj",
+      "projectUniqueName": "D:\\dev\\taskdown\\Taskdown\\Taskdown.Skia.Wpf.Host\\Taskdown.Skia.Wpf.Host.csproj",
       "projectName": "Taskdown.Skia.Wpf.Host",
-      "projectPath": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.Skia.Wpf.Host\\Taskdown.Skia.Wpf.Host.csproj",
-      "packagesPath": "C:\\Users\\guy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.Skia.Wpf.Host\\obj\\",
+      "projectPath": "D:\\dev\\taskdown\\Taskdown\\Taskdown.Skia.Wpf.Host\\Taskdown.Skia.Wpf.Host.csproj",
+      "packagesPath": "C:\\Users\\Guy\\.nuget\\packages\\",
+      "outputPath": "D:\\dev\\taskdown\\Taskdown\\Taskdown.Skia.Wpf.Host\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\guy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Guy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3833,8 +3833,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.Skia.WPF\\Taskdown.Skia.WPF.csproj": {
-              "projectPath": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.Skia.WPF\\Taskdown.Skia.WPF.csproj"
+            "D:\\dev\\taskdown\\Taskdown\\Taskdown.Skia.WPF\\Taskdown.Skia.WPF.csproj": {
+              "projectPath": "D:\\dev\\taskdown\\Taskdown\\Taskdown.Skia.WPF\\Taskdown.Skia.WPF.csproj"
             }
           }
         }
@@ -3880,7 +3880,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

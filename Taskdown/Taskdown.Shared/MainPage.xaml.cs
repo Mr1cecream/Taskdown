@@ -21,6 +21,7 @@ namespace Taskdown
         public MainPage()
         {
             this.InitializeComponent();
+            PageReferences.MainPage = this;
             TopFrame.Navigate(typeof(AppPage));
         }
     }

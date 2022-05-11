@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj": {}
+    "D:\\dev\\taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj": {
+    "D:\\dev\\taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj",
+        "projectUniqueName": "D:\\dev\\taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj",
         "projectName": "Taskdown",
-        "projectPath": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj",
-        "packagesPath": "C:\\Users\\guy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.UWP\\obj\\",
+        "projectPath": "D:\\dev\\taskdown\\Taskdown\\Taskdown.UWP\\Taskdown.UWP.csproj",
+        "packagesPath": "C:\\Users\\Guy\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\taskdown\\Taskdown\\Taskdown.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\guy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Guy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

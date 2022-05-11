@@ -22,21 +22,17 @@ namespace Taskdown
     /// </summary>
     public sealed partial class AppPage : Page
     {
-        private SidePanel _sidePanel;
-        private ListPage _listPage;
-        
         public AppPage()
         {
             this.InitializeComponent();
-            _sidePanel = new SidePanel(this);
-            SidePanelFrame.Navigate(typeof(SidePanel), _sidePanel);
+            PageReferences.AppPage = this;
+            SidePanelFrame.Navigate(typeof(SidePanel));
         }
 
         public void ListSelected(string listName)
         {
-            _listPage = new ListPage();
-            AppFrame.Navigate(typeof(ListPage), _listPage);
-            _listPage.GenerateList(listName);
+            AppFrame.Navigate(typeof(ListPage));
+            PageReferences.ListPage.GenerateList(listName);
         }
     }
 }

@@ -3468,24 +3468,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\guy\\.nuget\\packages\\": {},
+    "C:\\Users\\Guy\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.macOS\\Taskdown.macOS.csproj",
+      "projectUniqueName": "D:\\dev\\taskdown\\Taskdown\\Taskdown.macOS\\Taskdown.macOS.csproj",
       "projectName": "Taskdown.macOS",
-      "projectPath": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.macOS\\Taskdown.macOS.csproj",
-      "packagesPath": "C:\\Users\\guy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guy\\dev\\cs_school\\Taskdown\\Taskdown\\Taskdown.macOS\\obj\\",
+      "projectPath": "D:\\dev\\taskdown\\Taskdown\\Taskdown.macOS\\Taskdown.macOS.csproj",
+      "packagesPath": "C:\\Users\\Guy\\.nuget\\packages\\",
+      "outputPath": "D:\\dev\\taskdown\\Taskdown\\Taskdown.macOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\guy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Guy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

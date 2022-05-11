@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>GUY-LEGION5</Machine>
-    <WindowsUser>guy</WindowsUser>
+    <Machine>GUY-HELIOS-300</Machine>
+    <WindowsUser>Guy</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>12fa19e5-dc50-4d7b-b182-4fb2938fce54</PackageIdentityName>
     <PackageIdentityPublisher>CN=guy</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>33E5606AE49D003DD1B55D5E2E7D77ACBCB0F25A2652A566768370D1EFFAE334</RegisteredManifestChecksum>
+    <LayoutDir>D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>13C06FD962E789694A57CF8AB03ABAA18546E15B2109FDEB33649B0185E17CC9</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f81bc78c-4f41-41b8-ad82-b267967a5610_1.0.0.0_x64__k8s6ma9c6ep1y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f81bc78c-4f41-41b8-ad82-b267967a5610_k8s6ma9c6ep1y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f81bc78c-4f41-41b8-ad82-b267967a5610</RegisteredPackageID>
@@ -27,268 +27,268 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-28T15:57:58.601</Modified>
+      <Modified>2022-05-11T11:45:12.941</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Taskdown.exe">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Taskdown.exe">
       <PackagePath>entrypoint\Taskdown.exe</PackagePath>
-      <Modified>2022-04-28T15:57:57.559</Modified>
+      <Modified>2022-05-11T11:45:12.277</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\commonservicelocator\2.0.5\lib\netstandard2.0\CommonServiceLocator.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\commonservicelocator\2.0.5\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
       <Modified>2019-11-07T02:33:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
       <Modified>2020-10-19T18:40:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.extensions.dependencyinjection\5.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.extensions.dependencyinjection\5.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
       <Modified>2020-10-19T18:48:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\5.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\5.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
       <Modified>2020-10-19T18:48:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.extensions.logging\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.extensions.logging\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
       <Modified>2020-10-19T18:49:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.extensions.logging.abstractions\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.extensions.logging.abstractions\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
       <Modified>2020-10-19T18:48:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.extensions.logging.debug\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.extensions.logging.debug\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Debug.dll">
       <PackagePath>Microsoft.Extensions.Logging.Debug.dll</PackagePath>
       <Modified>2020-10-19T18:49:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.extensions.options\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.extensions.options\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll">
       <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
       <Modified>2020-10-19T18:48:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.extensions.primitives\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.extensions.primitives\5.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll">
       <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
       <Modified>2020-10-19T18:48:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.11\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.11\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2020-11-20T08:51:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\system.diagnostics.diagnosticsource\5.0.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\system.diagnostics.diagnosticsource\5.0.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2020-10-19T18:38:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2020-10-19T18:46:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\uno.core.extensions.logging.singleton\4.0.0-dev.7\lib\uap10.0.17763\Uno.Core.Extensions.Logging.Singleton.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\uno.core.extensions.logging.singleton\4.0.0-dev.7\lib\uap10.0.17763\Uno.Core.Extensions.Logging.Singleton.dll">
       <PackagePath>Uno.Core.Extensions.Logging.Singleton.dll</PackagePath>
       <Modified>2021-11-10T15:01:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\uno.diagnostics.eventing\2.0.1\lib\netstandard2.0\Uno.Diagnostics.Eventing.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\uno.diagnostics.eventing\2.0.1\lib\netstandard2.0\Uno.Diagnostics.Eventing.dll">
       <PackagePath>Uno.Diagnostics.Eventing.dll</PackagePath>
       <Modified>2021-11-25T03:50:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\uno.foundation.logging\4.1.9\lib\netstandard2.0\Uno.Foundation.Logging.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\uno.foundation.logging\4.1.9\lib\netstandard2.0\Uno.Foundation.Logging.dll">
       <PackagePath>Uno.Foundation.Logging.dll</PackagePath>
       <Modified>2022-03-21T20:14:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\uno.ui\4.1.9\lib\UAP\Uno.UI.Toolkit.dll">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\uno.ui\4.1.9\lib\UAP\Uno.UI.Toolkit.dll">
       <PackagePath>Uno.UI.Toolkit.dll</PackagePath>
       <Modified>2022-03-21T20:15:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2020-12-02T02:52:00.000</Modified>
+      <Modified>2020-12-02T01:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\uno.ui\4.1.9\lib\UAP\Uno.UI.Toolkit\Uno.UI.Toolkit.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\uno.ui\4.1.9\lib\UAP\Uno.UI.Toolkit\Uno.UI.Toolkit.xr.xml">
       <PackagePath>Uno.UI.Toolkit\Uno.UI.Toolkit.xr.xml</PackagePath>
       <Modified>2022-03-21T20:15:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-04-11T12:34:37.917</Modified>
+      <Modified>2022-04-25T09:57:33.031</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-11T12:34:37.918</Modified>
+      <Modified>2022-04-25T09:57:33.032</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-11T12:34:37.918</Modified>
+      <Modified>2022-04-25T09:57:33.033</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-11T12:34:37.919</Modified>
+      <Modified>2022-04-25T09:57:33.033</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-11T12:34:37.919</Modified>
+      <Modified>2022-04-25T09:57:33.034</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-11T12:34:37.919</Modified>
+      <Modified>2022-04-25T09:57:33.034</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-04-11T12:34:37.920</Modified>
+      <Modified>2022-04-25T09:57:33.036</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Shared\Assets\SharedAssets.md">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.Shared\Assets\SharedAssets.md">
       <PackagePath>Assets\SharedAssets.md</PackagePath>
-      <Modified>2022-04-11T12:34:36.282</Modified>
+      <Modified>2022-04-25T09:57:30.425</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Taskdown.xr.xml">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Taskdown.xr.xml">
       <PackagePath>Taskdown.xr.xml</PackagePath>
-      <Modified>2022-04-28T15:57:57.452</Modified>
+      <Modified>2022-05-11T11:45:12.198</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-28T15:57:57.484</Modified>
+      <Modified>2022-05-11T11:45:12.205</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\AppPage.xbf">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\AppPage.xbf">
       <PackagePath>AppPage.xbf</PackagePath>
-      <Modified>2022-04-28T15:57:57.484</Modified>
+      <Modified>2022-05-11T11:45:12.205</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\ListPage.xbf">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\ListPage.xbf">
       <PackagePath>ListPage.xbf</PackagePath>
-      <Modified>2022-04-28T15:57:57.484</Modified>
+      <Modified>2022-05-11T11:45:12.205</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-28T15:57:57.484</Modified>
+      <Modified>2022-05-11T11:45:12.205</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\SidePanel.xbf">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\SidePanel.xbf">
       <PackagePath>SidePanel.xbf</PackagePath>
-      <Modified>2022-04-28T15:57:57.484</Modified>
+      <Modified>2022-05-11T11:45:12.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
-      <Modified>2020-12-02T03:31:00.000</Modified>
+      <Modified>2020-12-02T02:31:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2020-12-02T00:52:06.000</Modified>
+      <Modified>2020-12-01T23:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-28T15:57:57.901</Modified>
+      <Modified>2022-05-11T11:07:29.269</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Core\Taskdown.exe">
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Core\Taskdown.exe">
       <PackagePath>Taskdown.exe</PackagePath>
-      <Modified>2022-04-28T15:57:58.593</Modified>
+      <Modified>2022-05-11T11:45:12.936</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2021-08-19T07:38:36.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx">
       <Name>Microsoft.UI.Xaml.2.6</Name>
       <Version>2.62108.18004.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx">
       <Name>Microsoft.UI.Xaml.2.6</Name>
       <Version>2.62108.18004.0</Version>
       <Architecture>Win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.6.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.6.appx">
       <Name>Microsoft.UI.Xaml.2.6</Name>
       <Version>2.62108.18004.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.6.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.6.appx">
       <Name>Microsoft.UI.Xaml.2.6</Name>
       <Version>2.62108.18004.0</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.6.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.6.appx">
       <Name>Microsoft.UI.Xaml.2.6</Name>
       <Version>2.62108.18004.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.27902.3</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.29301.2</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.29301.2</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\Guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.29301.2</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\Guy\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.11\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>

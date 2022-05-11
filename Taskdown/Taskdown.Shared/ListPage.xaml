@@ -10,26 +10,32 @@
 
     <Grid>
         <Border BorderThickness="0,0,1,0" BorderBrush="LightGray">
-            <ListView x:Name="TaskList">
-                <ListViewItem Content="Basic UI"/>
+            <ListView x:Name="TaskList" SelectionMode="Single" SelectionChanged="TaskSelected" IsItemClickEnabled="False">
+                <ListViewItem>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Basic UI"/>
+                        <TextBlock Text="Do the basic UI" Foreground="DimGray" FontSize="14"/>
+                    </StackPanel>
+                </ListViewItem>
                 <ListViewItem Content="Dynamic UI"/>
                 <ListViewItem Content="Local Database"/>
                 <ListViewItem Content="Web API and Remote Database"/>
 
                 <ListView.Resources>
                     <Style TargetType="ListViewItem">
-                        <Setter Property="MinHeight" Value="100"/>
+                        <Setter Property="MinHeight" Value="80"/>
                         <Setter Property="FontSize" Value="16"/>
                         <Setter Property="Foreground" Value="CornflowerBlue"/>
                         <Setter Property="FontFamily" Value="Comic Sans MS"/>
+                        <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </ListView.Resources>
             </ListView>
         </Border>
 
         <Grid Grid.Column="1">
-            
-            
+            <TextBlock x:Name="TaskNameTextBox" Foreground="DarkSlateGray"/>
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="8*" />

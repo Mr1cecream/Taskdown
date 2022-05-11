@@ -9,24 +9,31 @@
     Background="{ThemeResource PanelBackground}">
 
     <Grid Margin="10">
-        <TextBlock Text="Taskdown" Margin="20" FontSize="30" Foreground="White" FontWeight="Bold" />
+        <TextBlock Text="Taskdown" 
+                   Margin="20" 
+                   FontSize="30" Foreground="White" FontWeight="Bold" />
 
-        <StackPanel Margin="10" VerticalAlignment="Top" Orientation="Vertical" Grid.Row="1">
-            <TextBlock Text="List 1"/>
-            <TextBlock Text="List 2"/>
-            <TextBlock Text="List 3"/>
-            <TextBlock Text="List 4"/>
-
-            <StackPanel.Resources>
-                <Style TargetType="TextBlock">
+        <ListView x:Name="Lists" 
+                  Grid.Row="1" VerticalAlignment="Top" Margin="10" 
+                  SelectionMode="Single" IsItemClickEnabled="False" 
+                  SelectionChanged="ListSelected"
+                  >
+            <ListViewItem Content="List 1"/>
+            <ListViewItem Content="List 2"/>
+            <ListViewItem Content="List 3"/>
+            <ListViewItem Content="List 4"/>
+            <ListView.Resources>
+                <Style TargetType="ListViewItem">
                     <Setter Property="Foreground" Value="WhiteSmoke"/>
                     <Setter Property="FontSize" Value="16"/>
                     <Setter Property="FontFamily" Value="Comic Sans MS"/>
+                    <Setter Property="CornerRadius" Value="8"/>
                 </Style>
-            </StackPanel.Resources>
-        </StackPanel>
-
-        <StackPanel VerticalAlignment="Bottom" Orientation="Vertical" Grid.Row="2">
+            </ListView.Resources>
+        </ListView>
+        
+        <StackPanel VerticalAlignment="Bottom" Orientation="Vertical" 
+                    Grid.Row="2">
             <Button Content="Settings"/>
             <Button Content="Quit" Click="Quit"/>
             
