@@ -9,7 +9,7 @@
     Background="{ThemeResource PanelBackground}">
 
     <Grid Margin="10">
-        <TextBlock Text="Taskdown" 
+        <TextBlock x:Uid="ApplicationName" 
                    Margin="20" 
                    FontSize="30" Foreground="White" FontWeight="Bold" />
 
@@ -34,8 +34,8 @@
         
         <StackPanel VerticalAlignment="Bottom" Orientation="Vertical" 
                     Grid.Row="2">
-            <Button Content="Settings"/>
-            <Button Content="Quit" Click="Quit"/>
+            <Button x:Uid="Settings" Click="Settings"/>
+            <Button x:Uid="Quit" Click="Quit"/>
             
             <StackPanel.Resources>
                 <Style TargetType="Button">

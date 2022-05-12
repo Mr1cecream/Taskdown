@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,23 +21,18 @@ namespace Taskdown
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AppPage : Page
+    public sealed partial class SettingsPage : Page
     {
-        public AppPage()
+        private readonly ObservableCollection<Language> languages = Languages.languages;
+        public SettingsPage()
         {
             this.InitializeComponent();
-            PageReferences.AppPage = this;
-            SidePanelFrame.Navigate(typeof(SidePanel));
         }
 
-        public void ListSelected(string listName)
+        private void LanguageSelected(object sender, SelectionChangedEventArgs e)
         {
-            AppFrame.Navigate(typeof(ListPage));
-            PageReferences.ListPage.GenerateList(listName);
-        }
-        public void NavigateTo(Type dest)
-        {
-            this.AppFrame.Navigate(dest);
+            Language language = (Language) LanguageCb.SelectedItem;
+            Languages.SetAppLanguage(language);
         }
     }
 }

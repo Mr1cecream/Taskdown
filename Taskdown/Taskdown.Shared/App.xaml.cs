@@ -47,6 +47,15 @@ namespace Taskdown
 #if HAS_UNO || NETFX_CORE
             this.Suspending += OnSuspending;
 #endif
+
+            ChangeStartingLanguage();
+        }
+
+        private void ChangeStartingLanguage()
+        {
+            // TODO: api call to get user's preffered language
+            var culture = new System.Globalization.CultureInfo("en");
+            Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = culture.IetfLanguageTag;
         }
 
         /// <summary>

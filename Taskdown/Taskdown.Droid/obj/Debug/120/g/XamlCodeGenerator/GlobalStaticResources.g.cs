@@ -74,11 +74,12 @@ namespace Taskdown.Droid
 			if(!_stylesRegistered)
 			{
 				_stylesRegistered = true;
-				RegisterDefaultStyles_App_191f5e0ab54f5b8ad66769cc05519ec3();
-				RegisterDefaultStyles_AppPage_66033e3c7a63836f9828ae321fb91487();
-				RegisterDefaultStyles_ListPage_f594f0fe56a49e8095988157c81becc8();
-				RegisterDefaultStyles_MainPage_6039b808fdf080a0abb2fdf74590c679();
-				RegisterDefaultStyles_SidePanel_ac897285f0d8d0f9c03e7e6eac930f98();
+				RegisterDefaultStyles_App_cdc442e8b6b413eec7413fafb83c492b();
+				RegisterDefaultStyles_AppPage_ff858cef5ceace48e29f822dd6d94c72();
+				RegisterDefaultStyles_ListPage_640d3ca258e190b2484934222562e13d();
+				RegisterDefaultStyles_MainPage_898469c7bdd1f7b185627d5cd30733e0();
+				RegisterDefaultStyles_SettingsPage_59329d109c522dccc5e405bb90fcbc39();
+				RegisterDefaultStyles_SidePanel_2f27972786758c0e76390808a3db8814();
 			}
 		}
 		// Register ResourceDictionaries using ms-appx:/// syntax, this is called for external resources
@@ -93,11 +94,12 @@ namespace Taskdown.Droid
 		internal static void RegisterResourceDictionariesBySourceLocal()
 		{
 		}
-		static partial void RegisterDefaultStyles_App_191f5e0ab54f5b8ad66769cc05519ec3();
-		static partial void RegisterDefaultStyles_AppPage_66033e3c7a63836f9828ae321fb91487();
-		static partial void RegisterDefaultStyles_ListPage_f594f0fe56a49e8095988157c81becc8();
-		static partial void RegisterDefaultStyles_MainPage_6039b808fdf080a0abb2fdf74590c679();
-		static partial void RegisterDefaultStyles_SidePanel_ac897285f0d8d0f9c03e7e6eac930f98();
+		static partial void RegisterDefaultStyles_App_cdc442e8b6b413eec7413fafb83c492b();
+		static partial void RegisterDefaultStyles_AppPage_ff858cef5ceace48e29f822dd6d94c72();
+		static partial void RegisterDefaultStyles_ListPage_640d3ca258e190b2484934222562e13d();
+		static partial void RegisterDefaultStyles_MainPage_898469c7bdd1f7b185627d5cd30733e0();
+		static partial void RegisterDefaultStyles_SettingsPage_59329d109c522dccc5e405bb90fcbc39();
+		static partial void RegisterDefaultStyles_SidePanel_2f27972786758c0e76390808a3db8814();
 		[global::System.Obsolete("This method is provided for binary backward compatibility. It will always return null.")]
 		[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 		public static object FindResource(string name) => null;

@@ -38,5 +38,10 @@ namespace Taskdown
         {
             Application.Current.Exit();
         }
+
+        public void Settings(object sender, RoutedEventArgs e)
+        {
+            PageReferences.AppPage.NavigateTo(typeof(SettingsPage));
+        }
     }
 }

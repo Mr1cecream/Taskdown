@@ -126,6 +126,9 @@
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\SettingsPage.xbf">
+      <PackagePath>SettingsPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\SidePanel.xbf">
       <PackagePath>SidePanel.xbf</PackagePath>
     </AppxPackagedFile>

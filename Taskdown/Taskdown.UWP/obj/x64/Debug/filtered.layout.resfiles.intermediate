@@ -10,6 +10,7 @@ App.xbf
 AppPage.xbf
 ListPage.xbf
 MainPage.xbf
+SettingsPage.xbf
 SidePanel.xbf
 Taskdown.xr.xml
 Properties\Default.rd.xml

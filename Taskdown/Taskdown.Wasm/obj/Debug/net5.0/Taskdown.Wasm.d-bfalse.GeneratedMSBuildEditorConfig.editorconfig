@@ -18,7 +18,7 @@ build_property.UnoUISourceGeneratorDebuggerBreak =
 build_property.IsHotReloadHost = 
 build_property.UseWPF = 
 build_property.IsUnoHead = true
-build_property.UnoRemoteControlPort = 50615
+build_property.UnoRemoteControlPort = 58271
 build_property.UnoRemoteControlHost = 
 build_property.UnoRemoteControlProcessorsPath = C:\Users\Guy\.nuget\packages\uno.ui.remotecontrol\4.1.9\buildTransitive\../tools/rc/processors
 build_property.TSBindingsPath = 
@@ -62,6 +62,12 @@ build_metadata.AdditionalFiles.Link = MainPage.xaml
 build_metadata.AdditionalFiles.FullPath = D:\dev\taskdown\Taskdown\Taskdown.Shared\MainPage.xaml
 build_metadata.AdditionalFiles.Identity = D:\dev\taskdown\Taskdown\Taskdown.Shared\MainPage.xaml
 
+[D:/dev/taskdown/Taskdown/Taskdown.Shared/SettingsPage.xaml]
+build_metadata.AdditionalFiles.SourceItemGroup = Page
+build_metadata.AdditionalFiles.Link = SettingsPage.xaml
+build_metadata.AdditionalFiles.FullPath = D:\dev\taskdown\Taskdown\Taskdown.Shared\SettingsPage.xaml
+build_metadata.AdditionalFiles.Identity = D:\dev\taskdown\Taskdown\Taskdown.Shared\SettingsPage.xaml
+
 [D:/dev/taskdown/Taskdown/Taskdown.Shared/SidePanel.xaml]
 build_metadata.AdditionalFiles.SourceItemGroup = Page
 build_metadata.AdditionalFiles.Link = SidePanel.xaml
@@ -79,3 +85,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = PRIResource
 build_metadata.AdditionalFiles.Link = 
 build_metadata.AdditionalFiles.FullPath = D:\dev\taskdown\Taskdown\Taskdown.Shared\Strings\en\Resources.resw
 build_metadata.AdditionalFiles.Identity = D:\dev\taskdown\Taskdown\Taskdown.Shared\Strings\en\Resources.resw
+
+[D:/dev/taskdown/Taskdown/Taskdown.Shared/Strings/he/Resources.resw]
+build_metadata.AdditionalFiles.SourceItemGroup = PRIResource
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.FullPath = D:\dev\taskdown\Taskdown\Taskdown.Shared\Strings\he\Resources.resw
+build_metadata.AdditionalFiles.Identity = D:\dev\taskdown\Taskdown\Taskdown.Shared\Strings\he\Resources.resw

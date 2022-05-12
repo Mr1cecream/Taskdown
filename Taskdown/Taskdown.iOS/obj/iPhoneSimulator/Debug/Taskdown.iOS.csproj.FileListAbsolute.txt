@@ -61,3 +61,16 @@ C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\De
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\Taskdown.iOS.csproj.CopyComplete
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\Taskdown.exe
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\Taskdown.pdb
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\actool\_ProcessedImageAssetsPath.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\_ProcessedBundleResourcesPath.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\_ProcessedContentPath.items
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\optimized\
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\Taskdown.iOS.csproj.AssemblyReference.cache
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\Taskdown.iOS.csproj.CoreCompileInputs.cache
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\Taskdown.exe
+D:\dev\taskdown\Taskdown\Taskdown.iOS\obj\iPhoneSimulator\Debug\Taskdown.pdb

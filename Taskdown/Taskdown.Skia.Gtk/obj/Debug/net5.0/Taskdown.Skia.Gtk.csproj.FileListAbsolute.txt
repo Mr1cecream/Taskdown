@@ -80,3 +80,11 @@ C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.pdb
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.genruntimeconfig.cache
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\ref\Taskdown.Skia.Gtk.dll
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.csproj.AssemblyReference.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.AssemblyInfoInputs.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.AssemblyInfo.cs
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.csproj.CoreCompileInputs.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.dll
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\refint\Taskdown.Skia.Gtk.dll
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Gtk\obj\Debug\net5.0\Taskdown.Skia.Gtk.pdb

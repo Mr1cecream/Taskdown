@@ -10,5 +10,6 @@ namespace Taskdown
         public static AppPage AppPage { get; set; }
         public static SidePanel SidePanel { get; set; }
         public static ListPage ListPage { get; set; }
+        public static SettingsPage SettingsPage { get; set; }
     }
 }

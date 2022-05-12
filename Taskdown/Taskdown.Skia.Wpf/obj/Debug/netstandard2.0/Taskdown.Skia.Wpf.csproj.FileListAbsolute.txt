@@ -22,3 +22,10 @@ C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstan
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.dll
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.pdb
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.csproj.AssemblyReference.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.AssemblyInfoInputs.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.AssemblyInfo.cs
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.csproj.CoreCompileInputs.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.dll
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Wpf\obj\Debug\netstandard2.0\Taskdown.Skia.Wpf.pdb

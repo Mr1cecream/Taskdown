@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>13C06FD962E789694A57CF8AB03ABAA18546E15B2109FDEB33649B0185E17CC9</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>F4866ED554719A2F4F21953141A0C792B70E5AE2686B8D5D3FEE00A9B353CB5C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f81bc78c-4f41-41b8-ad82-b267967a5610_1.0.0.0_x64__k8s6ma9c6ep1y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f81bc78c-4f41-41b8-ad82-b267967a5610_k8s6ma9c6ep1y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f81bc78c-4f41-41b8-ad82-b267967a5610</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-11T11:45:12.941</Modified>
+      <Modified>2022-05-12T11:29:47.269</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Taskdown.exe">
       <PackagePath>entrypoint\Taskdown.exe</PackagePath>
-      <Modified>2022-05-11T11:45:12.277</Modified>
+      <Modified>2022-05-12T11:29:45.919</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\commonservicelocator\2.0.5\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -149,27 +149,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Taskdown.xr.xml">
       <PackagePath>Taskdown.xr.xml</PackagePath>
-      <Modified>2022-05-11T11:45:12.198</Modified>
+      <Modified>2022-05-12T11:27:07.943</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-11T11:45:12.205</Modified>
+      <Modified>2022-05-12T11:29:45.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\AppPage.xbf">
       <PackagePath>AppPage.xbf</PackagePath>
-      <Modified>2022-05-11T11:45:12.205</Modified>
+      <Modified>2022-05-12T11:29:45.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\ListPage.xbf">
       <PackagePath>ListPage.xbf</PackagePath>
-      <Modified>2022-05-11T11:45:12.205</Modified>
+      <Modified>2022-05-12T11:29:45.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-05-11T11:45:12.205</Modified>
+      <Modified>2022-05-12T11:29:45.782</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\SettingsPage.xbf">
+      <PackagePath>SettingsPage.xbf</PackagePath>
+      <Modified>2022-05-12T11:29:45.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\SidePanel.xbf">
       <PackagePath>SidePanel.xbf</PackagePath>
-      <Modified>2022-05-11T11:45:12.205</Modified>
+      <Modified>2022-05-12T11:29:45.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -181,11 +185,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-11T11:07:29.269</Modified>
+      <Modified>2022-05-12T11:29:46.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\Core\Taskdown.exe">
       <PackagePath>Taskdown.exe</PackagePath>
-      <Modified>2022-05-11T11:45:12.936</Modified>
+      <Modified>2022-05-12T11:29:47.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guy\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

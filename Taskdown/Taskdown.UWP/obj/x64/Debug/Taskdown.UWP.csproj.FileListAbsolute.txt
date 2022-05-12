@@ -179,3 +179,8 @@ D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\MultipleQualifiersPerDimensi
 D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\ProjectArchitectures.txt
 D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424707200000000.json
 D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+D:\dev\taskdown\Taskdown\Taskdown.UWP\bin\x64\Debug\SettingsPage.xbf
+D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\SettingsPage.g.i.cs
+D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\SettingsPage.g.cs
+D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\SettingsPage.xaml
+D:\dev\taskdown\Taskdown\Taskdown.UWP\obj\x64\Debug\SettingsPage.xbf

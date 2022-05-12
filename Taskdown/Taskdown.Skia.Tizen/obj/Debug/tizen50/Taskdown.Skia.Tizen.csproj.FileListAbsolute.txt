@@ -23,3 +23,10 @@ C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.dll
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.pdb
 C:\Users\guy\dev\cs_school\Taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.csproj.AssemblyReference.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.d-bfalse.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.AssemblyInfoInputs.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.AssemblyInfo.cs
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.csproj.CoreCompileInputs.cache
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.dll
+D:\dev\taskdown\Taskdown\Taskdown.Skia.Tizen\obj\Debug\tizen50\Taskdown.Skia.Tizen.pdb

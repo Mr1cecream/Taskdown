@@ -121,12 +121,12 @@
     <value>Taskdown</value>
   </data>
   <data name="Language.Header" xml:space="preserve">
-    <value>Language</value>
+    <value>שפה</value>
   </data>
   <data name="Quit.Content" xml:space="preserve">
-    <value>Quit</value>
+    <value>סגירה</value>
   </data>
   <data name="Settings.Content" xml:space="preserve">
-    <value>Settings</value>
+    <value>הגדרות</value>
   </data>
 </root>
