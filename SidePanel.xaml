@@ -12,12 +12,10 @@
         <TextBlock Text="Taskdown" 
                    Margin="20" 
                    FontSize="30" Foreground="White" FontWeight="Bold" />
-
         <ListView x:Name="Lists" 
-                  Grid.Row="1" VerticalAlignment="Top" Margin="10" 
-                  SelectionMode="Single" IsItemClickEnabled="False" 
-                  SelectionChanged="ListSelected"
-                  >
+                VerticalAlignment="Top" Grid.Row="1" Margin="10"
+                SelectionMode="Single" IsItemClickEnabled="False" 
+                SelectionChanged="ListSelected">
             <ListViewItem Content="List 1"/>
             <ListViewItem Content="List 2"/>
             <ListViewItem Content="List 3"/>
@@ -32,9 +30,16 @@
             </ListView.Resources>
         </ListView>
 
+        <StackPanel Orientation="Vertical" Grid.Row="2" VerticalAlignment="Top">
+            <TextBox PlaceholderText="Enter list name" x:Name="NewListTextbox"
+                     MinWidth="200" FontSize="18"/>
+            <Button Content="Add new list" Click="AddList" FontSize="18"/>
+        </StackPanel>
+
         <StackPanel VerticalAlignment="Bottom" Orientation="Vertical" 
                     Grid.Row="2">
             <Button Content="Settings" Click="Settings"/>
+            <Button Content="Log Out" Click="Logout"/>
             <Button Content="Quit" Click="Quit"/>
 
             <StackPanel.Resources>

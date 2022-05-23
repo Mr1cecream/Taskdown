@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,21 +25,58 @@ namespace Taskdown
     /// </summary>
     public sealed partial class ListPage : Page
     {
-        private static bool inEditingMode = false;
+        private bool inEditingMode = false;
+        private string listName;
+        private ObservableCollection<ListViewItem> list = new ObservableCollection<ListViewItem>();
+        private Guid currentTaskId;
+        private bool currentTaskCompleted;
         public ListPage()
         {
             this.InitializeComponent();
             PageReferences.ListPage = this;
+            MdTextbox.Text =
+@"# Welcome to Taskdown!
+This area is where you write and view your tasks in markdown form.
+On the top, you will see a few buttons - those are controls for your task.
+To switch to editing mode, press the 'Switch to Editing Mode' button on the top.
+To switch back to reading mode, press the same button, now labeled
+'Switch to Reading Mode'.
+Select a task from the list on the left or create a new one on the top
+to begin marking down your tasks!";
         }
 
         public void GenerateList(string listName)
         {
-            // TODO: call to api to get list of tasks
-            TaskList.Items.Clear();
-            TaskList.Items.Add(BuildTask(Guid.NewGuid(), "Finish porting to UWP", "Finish this stuff"));
+            this.listName = listName;
+            GenerateList();
+        }
+        public void GenerateList()
+        {
+            SqliteCommand command = new SqliteCommand
+            {
+                CommandText = "SELECT guid, name, description, completed FROM tasks WHERE userguid=@UserGuid AND list=@List"
+            };
+            command.Parameters.AddWithValue("@UserGuid", PageReferences.MainPage.UserGuid);
+            command.Parameters.AddWithValue("@List", listName);
+            list.Clear();
+            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
+            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            {
+                connection.Open();
+                command.Connection = connection;
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    var task = BuildTask(reader.GetGuid(0), reader.GetString(1), reader.GetString(2), reader.GetBoolean(3));
+                    list.Add(task);
+                }
+                reader.Close();
+                connection.Close();
+            }
+            TaskList.ItemsSource = list;
         }
 
-        private ListViewItem BuildTask(Guid id, string name, string description)
+        private ListViewItem BuildTask(Guid id, string name, string description, bool completed)
         {
             var li = new ListViewItem()
             {
@@ -68,17 +108,149 @@ namespace Taskdown
 
             li.PointerPressed += TaskSelected;
 
+            if (completed)
+                li.Background = new SolidColorBrush(Windows.UI.Colors.LightGreen);
+
             return li;
+        }
+
+        private void SaveTask()
+        {
+            if (currentTaskId == null) return;
+            if (inEditingMode)
+                ReadingMode();
+            var command = new SqliteCommand
+            {
+                CommandText = "UPDATE tasks SET markdown=@Markdown WHERE guid=@Guid"
+            };
+            command.Parameters.AddWithValue("@Markdown", MdTextbox.Text);
+            command.Parameters.AddWithValue("@Guid", currentTaskId);
+            DatabaseAccess.ExecuteNonQuery(command);
         }
 
         private void TaskSelected(object sender, RoutedEventArgs e)
         {
-            var li = TaskList.SelectedItem as ListViewItem;
-            if (li == null || li.Tag == null) return;
+            SaveTask();
+            if (!(TaskList.SelectedItem is ListViewItem li) || li.Tag == null) return;
             Guid taskId = (Guid)li.Tag;
-            // TODO: call api to generate markdown text block
+            var command = new SqliteCommand
+            {
+                CommandText = "SELECT name, markdown, completed FROM tasks WHERE guid=@Guid"
+            };
+            command.Parameters.AddWithValue("@Guid", taskId);
+            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
+            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            {
+                connection.Open();
+                command.Connection = connection;
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    TaskNameTextBox.Text = reader.GetString(0);
+                    if (reader.IsDBNull(1))
+                        MdTextbox.Text = "";
+                    else
+                        MdTextbox.Text = reader.GetString(1);
+                    currentTaskCompleted = reader.GetBoolean(2);
+                    UpdateCompleteBtn();
+                }
+                reader.Close();
+                connection.Close();
+            }
+            currentTaskId = taskId;
         }
 
-        
+        private void SwitchMode(object sender, RoutedEventArgs e)
+        {
+            if (inEditingMode)
+            {
+                ReadingMode();
+            }
+            else
+            {
+                EditingMode();
+            }
+            inEditingMode = !inEditingMode;
+        }
+
+        private void EditingMode()
+        {
+            LiteralTexbox.Text = MdTextbox.Text;
+            MdTextbox.Visibility = Visibility.Collapsed;
+            LiteralTexbox.Visibility = Visibility.Visible;
+            SwitchModeBtn.Content = "Switch to Reading Mode";
+        }
+
+        private void ReadingMode()
+        {
+            MdTextbox.Text = LiteralTexbox.Text;
+            LiteralTexbox.Visibility = Visibility.Collapsed;
+            MdTextbox.Visibility = Visibility.Visible;
+            SwitchModeBtn.Content = "Switch to Editing Mode";
+        }
+
+        private void NewTask(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(NewTaskName.Text))
+                return;
+            var cmd = new SqliteCommand
+            {
+                CommandText = $"INSERT INTO tasks VALUES (@Guid, @UserGuid, @List, @Name, @Desc, NULL, FALSE)"
+            };
+            cmd.Parameters.AddWithValue("@Guid", Guid.NewGuid());
+            cmd.Parameters.AddWithValue("@UserGuid", PageReferences.MainPage.UserGuid);
+            cmd.Parameters.AddWithValue("@List", listName);
+            cmd.Parameters.AddWithValue("@Name", NewTaskName.Text);
+            cmd.Parameters.AddWithValue("@Desc", NewTaskDesc.Text);
+            DatabaseAccess.ExecuteNonQuery(cmd);
+            GenerateList();
+            NewTaskName.Text = string.Empty; NewTaskDesc.Text = string.Empty;
+        }
+
+        private void DeleteTask(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CompleteTask(object sender, RoutedEventArgs e)
+        {
+            var command = new SqliteCommand
+            {
+                CommandText = "UPDATE tasks SET completed=@Completed WHERE guid=@Guid"
+            };
+            command.Parameters.AddWithValue("@Completed", !currentTaskCompleted);
+            command.Parameters.AddWithValue("@Guid", currentTaskId);
+            DatabaseAccess.ExecuteNonQuery(command);
+            foreach (var li in list)
+            {
+                if ((Guid)li.Tag == currentTaskId)
+                {
+                    if (currentTaskCompleted)
+                        li.Background = new SolidColorBrush(Windows.UI.Colors.Transparent);
+                    else
+                        li.Background = new SolidColorBrush(Windows.UI.Colors.LightGreen);
+                    break;
+                }
+            }
+            currentTaskCompleted = !currentTaskCompleted;
+            UpdateCompleteBtn();
+        }
+
+        private void UpdateCompleteBtn()
+        {
+            if (currentTaskCompleted)
+            {
+                CompleteBtn.Content = "Mark Task as Uncompleted";
+            }
+            else
+            {
+                CompleteBtn.Content = "Mark Task as Completed";
+            }
+        }
+
+        private void SaveTask(object sender, RoutedEventArgs e)
+        {
+            SaveTask();
+        }
     }
 }

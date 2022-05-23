@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,16 +25,49 @@ namespace Taskdown
     /// </summary>
     public sealed partial class SidePanel : Page
     {
+        private ObservableCollection<String> lists;
         public SidePanel()
         {
             this.InitializeComponent();
             PageReferences.SidePanel = this;
+            Lists.Items.Clear();
+            RefreshLists();
+            Lists.ItemsSource = lists;
         }
+
+        private ObservableCollection<String> GetLists(Guid userGuid)
+        {
+            ObservableCollection<String> list = new ObservableCollection<String>();
+            var command = new SqliteCommand
+            {
+                CommandText = "SELECT list FROM tasks WHERE userguid=@UserGuid"
+            };
+            command.Parameters.AddWithValue("@UserGuid", userGuid);
+            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
+            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            {
+                connection.Open();
+                command.Connection = connection;
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    string listName = reader.GetString(0);
+                    if (!list.Contains(listName))
+                        list.Add(listName);
+                }
+                reader.Close();
+                connection.Close();
+            }
+            return list;
+        }
+
+        private void RefreshLists() =>
+            lists = GetLists((Guid)PageReferences.MainPage.UserGuid);
 
         public void ListSelected(object sender, RoutedEventArgs e)
         {
-            var li = Lists.SelectedItem as ListViewItem;
-            PageReferences.AppPage.ListSelected(li.Content.ToString());
+            var li = (string)Lists.SelectedItem;
+            PageReferences.AppPage.ListSelected(li);
         }
 
         public void Quit(object sender, RoutedEventArgs e)
@@ -42,6 +78,18 @@ namespace Taskdown
         public void Settings(object sender, RoutedEventArgs e)
         {
             //PageReferences.AppPage.NavigateTo(typeof(SettingsPage));
+        }
+
+        private void AddList(object sender, RoutedEventArgs e)
+        {
+            string name = NewListTextbox.Text;
+            if (!string.IsNullOrEmpty(name))
+                lists.Add(name);
+        }
+
+        private void Logout(object sender, RoutedEventArgs e)
+        {
+            PageReferences.MainPage.Logout();
         }
     }
 }

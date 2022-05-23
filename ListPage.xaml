@@ -10,46 +10,70 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Border BorderThickness="0,0,1,0" BorderBrush="LightGray">
-            <ListView x:Name="TaskList" SelectionMode="Single" SelectionChanged="TaskSelected" IsItemClickEnabled="False">
-                <ListViewItem>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Basic UI"/>
-                        <TextBlock Text="Do the basic UI" 
-                                   Foreground="DimGray" FontSize="14"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Content="Dynamic UI"/>
-                <ListViewItem Content="Local Database"/>
-                <ListViewItem Content="Web API and Remote Database"/>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
+                <TextBox x:Name="NewTaskName" MinWidth="250"
+                         PlaceholderText="Enter New Task Name"
+                         FontSize="18"/>
+                <TextBox x:Name="NewTaskDesc"
+                         PlaceholderText="Enter New Task Description"
+                         FontSize="18"/>
 
-                <ListView.Resources>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="MinHeight" Value="80"/>
-                        <Setter Property="FontSize" Value="16"/>
-                        <Setter Property="Foreground" Value="CornflowerBlue"/>
-                        <Setter Property="FontFamily" Value="Comic Sans MS"/>
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </ListView.Resources>
-            </ListView>
-        </Border>
+                <Button Content="Add Task" Click="NewTask" FontSize="18"/>
+            </StackPanel>
+            <Border BorderThickness="0,0,1,0" BorderBrush="LightGray">
+                <ListView x:Name="TaskList" SelectionMode="Single" 
+                      SelectionChanged="TaskSelected" IsItemClickEnabled="False">
+                    <ListViewItem>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Basic UI"/>
+                            <TextBlock Text="Do the basic UI" 
+                                   Foreground="DimGray" FontSize="14"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Content="Dynamic UI"/>
+                    <ListViewItem Content="Local Database" Background="LightGreen"/>
+                    <ListViewItem Content="Web API and Remote Database"/>
+
+                    <ListView.Resources>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="MinHeight" Value="80"/>
+                            <Setter Property="FontSize" Value="16"/>
+                            <Setter Property="Foreground" Value="CornflowerBlue"/>
+                            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </ListView.Resources>
+                </ListView>
+            </Border>
+        </StackPanel>
 
         <Grid Grid.Column="1">
             <Grid>
-                <TextBlock x:Name="TaskNameTextBox" 
-                           Foreground="DarkSlateGray"/>
-                <Button x:Name="SwitchMode" Content="Switch to Editing Mode" 
-                        HorizontalAlignment="Right" />
+                <TextBlock x:Name="TaskNameTextBox" Text="Welcome to Taskdown!"
+                           Foreground="DarkSlateGray" FontSize="24"/>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" 
+                            Padding="0, 10, 10, 0">
+                    <Button x:Name="SwitchModeBtn" Content="Switch to Editing Mode" 
+                        Click="SwitchMode" HorizontalAlignment="Center"/>
+                    <Button x:Name="SaveBtn" Content="Save Task" 
+                        Click="SaveTask" HorizontalAlignment="Center"/>
+                    <Button x:Name="CompleteBtn" Content="Mark as Completed" 
+                        Click="CompleteTask" HorizontalAlignment="Center"/>
+                    <Button x:Name="DeleteBtn" Content="Delete Task" 
+                        Click="DeleteTask" HorizontalAlignment="Center"
+                            Background="Red"/>
+                </StackPanel>
             </Grid>
 
             <Grid x:Name="TextBoxGrid" Grid.Row="1">
-                <controls:MarkdownTextBlock Text="#Hello. I am a Task."/>
+                <controls:MarkdownTextBlock x:Name="MdTextbox" Text="# Welcome to Taskdown!"/>
+                <TextBox x:Name="LiteralTexbox" AcceptsReturn="True" Visibility="Collapsed"/>
             </Grid>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
-                <RowDefinition Height="8*" />
+                <RowDefinition Height="5.5*" />
             </Grid.RowDefinitions>
         </Grid>
 
