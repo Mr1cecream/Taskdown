@@ -19,10 +19,12 @@
                         HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Username: " FontSize="40" Padding="0,0,20,0"/>
+                    <TextBlock Text="Username: " FontSize="40" Padding="0,0,20,0"
+                               />
                     <TextBox x:Name="UsernameTextbox" FontSize="40" AcceptsReturn="False" 
                              MinWidth="350" PlaceholderText="Enter Username" TextAlignment="Left"
-                             TextChanged="UsernameChanged"/>
+                             TextChanged="UsernameChanged" 
+                             KeyDown="ReturnPressed" Tag="Username"/>
                 </StackPanel>
                 <TextBlock x:Name="UsernameError" Foreground="Red" FontSize="16" 
                            Visibility="Collapsed"/>
@@ -33,12 +35,16 @@
                 <StackPanel Orientation="Horizontal" 
                             HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Text="Password: " FontSize="40" Padding="0,0,20,0"/>
-                    <PasswordBox x:Name="PasswordTextbox" FontSize="40" MinWidth="350"
-                             PlaceholderText="Enter Password" 
-                             PasswordChanged="PasswordChanged"/>
-                    <PasswordBox x:Name="ConfirmTextbox" FontSize="40" MinWidth="350"
+                    <StackPanel Orientation="Vertical">
+                        <PasswordBox x:Name="PasswordTextbox" FontSize="40" MinWidth="350"
+                             PlaceholderText="Enter Password" Margin="0,0,0,20"
+                             PasswordChanged="PasswordChanged"
+                                     KeyDown="ReturnPressed" Tag="Password"/>
+                        <PasswordBox x:Name="ConfirmTextbox" FontSize="40" MinWidth="350"
                              PlaceholderText="Confirm Password" Visibility="Collapsed"
-                                 PasswordChanged="PasswordChanged"/>
+                                 PasswordChanged="PasswordChanged"
+                                     KeyDown="ReturnPressed" Tag="Confirm"/>
+                    </StackPanel>
                 </StackPanel>
                 <TextBlock x:Name="PasswordError" Foreground="Red" FontSize="16" 
                            Visibility="Collapsed"/>
@@ -46,12 +52,13 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="4"
                         HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="LoginBtn" Content="Sign In" FontSize="52" 
+                <Button x:Name="LoginBtn" Content="Sign In" FontSize="50" 
                         Margin="0,0,20,0" Background="LimeGreen"
-                        Click="LoginButton" Foreground="WhiteSmoke"/>
-                <Button x:Name="CreateBtn" Content="Create Account" FontSize="52"
+                        Click="LoginButton" Foreground="WhiteSmoke"
+                        Padding="8"/>
+                <Button x:Name="CreateBtn" Content="Create Account" FontSize="50"
                         Background="DodgerBlue" Foreground="WhiteSmoke"
-                        Click="CreateAccount"/>
+                        Click="CreateAccount" Padding="8"/>
             </StackPanel>
 
             <Grid.RowDefinitions>
@@ -65,7 +72,6 @@
 
         <TextBlock Grid.Row="3" Text="Made by Guy Ochakovsky." 
                    VerticalAlignment="Bottom" Margin="20, 20" FontSize="24"/>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="3*" />

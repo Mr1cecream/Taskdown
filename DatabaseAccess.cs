@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Data.Sqlite;
 using Windows.Storage;
 
 namespace Taskdown
@@ -18,7 +14,7 @@ namespace Taskdown
             using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
             {
                 connection.Open();
-                string usersTableCmdStr = 
+                string usersTableCmdStr =
 @"CREATE TABLE IF NOT EXISTS users(
 guid TEXT NOT NULL PRIMARY KEY,
 username TEXT UNIQUE NOT NULL,

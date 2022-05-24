@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Isopoh.Cryptography.Argon2;
+using Microsoft.Data.Sqlite;
+using System;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Microsoft.Data.Sqlite;
-using Isopoh.Cryptography.Argon2;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -73,7 +63,7 @@ namespace Taskdown
             PageReferences.MainPage.Login();
         }
 
-        private bool Login(string username, string password) 
+        private bool Login(string username, string password)
         {
             SqliteCommand getUser = new SqliteCommand
             {
@@ -113,7 +103,7 @@ namespace Taskdown
                 CommandText = "SELECT EXISTS(SELECT 1 FROM users WHERE username=@Username LIMIT 1);"
             };
             userExistsCmd.Parameters.AddWithValue("@Username", username);
-            long userExists = (long) DatabaseAccess.ExecuteScalar(userExistsCmd);
+            long userExists = (long)DatabaseAccess.ExecuteScalar(userExistsCmd);
             if (userExists > 0)
             {
                 ShowUsernameError("User already exists!");
@@ -135,7 +125,7 @@ namespace Taskdown
         private void CreateAccount(object sender, RoutedEventArgs e)
         {
             if (!createAccount)
-            { 
+            {
                 createAccount = true;
                 ConfirmTextbox.Visibility = Visibility.Visible;
                 CreateBtn.Content = "Existing Account";
@@ -153,7 +143,7 @@ namespace Taskdown
         private bool Validate(string str)
         {
             foreach (char c in str)
-                if (!( (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '_'))
+                if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '_'))
                     return false;
             return true;
         }
@@ -179,5 +169,26 @@ namespace Taskdown
             PasswordError.Visibility = Visibility.Collapsed;
         }
 
+        private void ReturnPressed(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key != Windows.System.VirtualKey.Enter) return;
+            switch ((sender as Control).Tag.ToString())
+            {
+                case "Username":
+                    PasswordTextbox.Focus(FocusState.Programmatic);
+                    break;
+                case "Password":
+                    if (createAccount)
+                        ConfirmTextbox.Focus(FocusState.Programmatic);
+                    else
+                        LoginButton(null, null);
+                    break;
+                case "Confirm":
+                    LoginButton(null, null);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

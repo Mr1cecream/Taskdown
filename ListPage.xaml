@@ -50,9 +50,21 @@
 
         <Grid Grid.Column="1">
             <Grid>
-                <TextBlock x:Name="TaskNameTextBox" Text="Welcome to Taskdown!"
-                           Foreground="DarkSlateGray" FontSize="24"/>
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" 
+                <Grid Margin="5">
+                    <TextBox x:Name="TaskNameTextBox" Text="Welcome to Taskdown!"
+                             TextChanged="TaskChanged" Tag="Name"
+                           Foreground="DarkSlateGray" FontSize="24" 
+                             PlaceholderText="Task Name" Padding="5" Margin="0,0,0,5"/>
+                    <TextBox x:Name="TaskDescTextBox" Text="Taskdown is a task managment program for Windows 10/11 with Markdown support!" 
+                             TextChanged="TaskChanged" Grid.Row="1" Tag="Description"
+                           Foreground="SlateGray" FontSize="24" Padding="5"
+                           PlaceholderText="Task Description" TextWrapping="Wrap"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Right" 
                             Padding="0, 10, 10, 0">
                     <Button x:Name="SwitchModeBtn" Content="Switch to Editing Mode" 
                         Click="SwitchMode" HorizontalAlignment="Center"/>
@@ -62,13 +74,26 @@
                         Click="CompleteTask" HorizontalAlignment="Center"/>
                     <Button x:Name="DeleteBtn" Content="Delete Task" 
                         Click="DeleteTask" HorizontalAlignment="Center"
-                            Background="Red"/>
+                            Background="Red" Foreground="White">
+                        <!--<Button.Resources>
+                            <ResourceDictionary>
+                                <SolidColorBrush x:Key="ButtonForeground"
+                            </ResourceDictionary>
+                        </Button.Resources>-->
+                    </Button>
                 </StackPanel>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.5*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
             </Grid>
 
             <Grid x:Name="TextBoxGrid" Grid.Row="1">
-                <controls:MarkdownTextBlock x:Name="MdTextbox" Text="# Welcome to Taskdown!"/>
-                <TextBox x:Name="LiteralTexbox" AcceptsReturn="True" Visibility="Collapsed"/>
+                <controls:MarkdownTextBlock x:Name="MdTextbox" Text="# Welcome to Taskdown!"
+                                            TextWrapping="WrapWholeWords" Padding="5" 
+                                            WrapCodeBlock="True"/>
+                <TextBox x:Name="LiteralTexbox" AcceptsReturn="True" Visibility="Collapsed"
+                         TextWrapping="Wrap" Padding="5"/>
             </Grid>
 
             <Grid.RowDefinitions>

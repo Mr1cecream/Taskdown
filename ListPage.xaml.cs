@@ -1,20 +1,11 @@
 ﻿using Microsoft.Data.Sqlite;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,6 +21,7 @@ namespace Taskdown
         private ObservableCollection<ListViewItem> list = new ObservableCollection<ListViewItem>();
         private Guid currentTaskId;
         private bool currentTaskCompleted;
+        private string currentTaskContent;
         public ListPage()
         {
             this.InitializeComponent();
@@ -119,6 +111,7 @@ to begin marking down your tasks!";
             if (currentTaskId == null) return;
             if (inEditingMode)
                 ReadingMode();
+            if (currentTaskContent == MdTextbox.Text) return;
             var command = new SqliteCommand
             {
                 CommandText = "UPDATE tasks SET markdown=@Markdown WHERE guid=@Guid"
@@ -135,7 +128,7 @@ to begin marking down your tasks!";
             Guid taskId = (Guid)li.Tag;
             var command = new SqliteCommand
             {
-                CommandText = "SELECT name, markdown, completed FROM tasks WHERE guid=@Guid"
+                CommandText = "SELECT name, description, markdown, completed FROM tasks WHERE guid=@Guid"
             };
             command.Parameters.AddWithValue("@Guid", taskId);
             string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
@@ -147,11 +140,12 @@ to begin marking down your tasks!";
                 while (reader.Read())
                 {
                     TaskNameTextBox.Text = reader.GetString(0);
-                    if (reader.IsDBNull(1))
-                        MdTextbox.Text = "";
+                    TaskDescTextBox.Text = reader.GetString(1);
+                    if (reader.IsDBNull(2))
+                        currentTaskContent = MdTextbox.Text = "";
                     else
-                        MdTextbox.Text = reader.GetString(1);
-                    currentTaskCompleted = reader.GetBoolean(2);
+                        currentTaskContent = MdTextbox.Text = reader.GetString(2);
+                    currentTaskCompleted = reader.GetBoolean(3);
                     UpdateCompleteBtn();
                 }
                 reader.Close();
@@ -209,7 +203,13 @@ to begin marking down your tasks!";
 
         private void DeleteTask(object sender, RoutedEventArgs e)
         {
-
+            var command = new SqliteCommand
+            {
+                CommandText = "DELETE FROM tasks WHERE guid=@Guid"
+            };
+            command.Parameters.AddWithValue("@Guid", currentTaskId);
+            DatabaseAccess.ExecuteNonQuery(command);
+            GenerateList();
         }
 
         private void CompleteTask(object sender, RoutedEventArgs e)
@@ -251,6 +251,42 @@ to begin marking down your tasks!";
         private void SaveTask(object sender, RoutedEventArgs e)
         {
             SaveTask();
+        }
+
+        private void TaskChanged(object sender, TextChangedEventArgs e)
+        {
+            string columnChanged;
+            string newContent;
+            switch ((sender as TextBox).Tag.ToString())
+            {
+                case "Name":
+                    columnChanged = "name";
+                    newContent = TaskNameTextBox.Text;
+                    break;
+                case "Description":
+                    columnChanged = "description";
+                    newContent = TaskDescTextBox.Text;
+                    break;
+                default:
+                    return;
+            }
+            var command = new SqliteCommand
+            {
+                CommandText = $"UPDATE tasks SET {columnChanged}=@NewContent WHERE guid=@Guid"
+            };
+            command.Parameters.AddWithValue("@NewContent", newContent);
+            command.Parameters.AddWithValue("@Guid", currentTaskId);
+            DatabaseAccess.ExecuteNonQuery(command);
+            foreach (var li in list)
+            {
+                if ((Guid)li.Tag == currentTaskId)
+                {
+                    var sp = li.Content as StackPanel;
+                    var tb = sp.Children[columnChanged == "name" ? 0 : 1] as TextBlock;
+                    tb.Text = newContent;
+                    break;
+                }
+            }
         }
     }
 }
