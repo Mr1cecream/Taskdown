@@ -7,11 +7,12 @@ namespace Taskdown
 {
     internal class DatabaseAccess
     {
+        public static string dbPath { get; private set; }
         public async static void InitializeDatabase()
         {
             await ApplicationData.Current.LocalFolder.CreateFileAsync("database.db", CreationCollisionOption.OpenIfExists);
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            dbPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
+            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
             {
                 connection.Open();
                 string usersTableCmdStr =
@@ -37,10 +38,10 @@ completed INTEGER NOT NULL);";
             }
         }
 
+        // template only, do not call
         private static void ExecuteReader(SqliteCommand command)
         {
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -56,8 +57,7 @@ completed INTEGER NOT NULL);";
 
         public static void ExecuteNonQuery(SqliteCommand command)
         {
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -69,8 +69,7 @@ completed INTEGER NOT NULL);";
         public static object ExecuteScalar(SqliteCommand command)
         {
             object value = null;
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;

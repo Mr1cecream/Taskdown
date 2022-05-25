@@ -1,8 +1,6 @@
 ﻿using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.ObjectModel;
-using System.IO;
-using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -51,8 +49,7 @@ to begin marking down your tasks!";
             command.Parameters.AddWithValue("@UserGuid", PageReferences.MainPage.UserGuid);
             command.Parameters.AddWithValue("@List", listName);
             list.Clear();
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.dbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -131,8 +128,7 @@ to begin marking down your tasks!";
                 CommandText = "SELECT name, description, markdown, completed FROM tasks WHERE guid=@Guid"
             };
             command.Parameters.AddWithValue("@Guid", taskId);
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.dbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;

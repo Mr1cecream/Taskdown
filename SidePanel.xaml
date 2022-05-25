@@ -40,7 +40,7 @@
 
         <StackPanel Orientation="Vertical" Grid.Row="2" VerticalAlignment="Top">
             <TextBox PlaceholderText="Enter list name" x:Name="NewListTextbox"
-                     MinWidth="200" FontSize="18"/>
+                     MinWidth="200" FontSize="18" KeyDown="EnterPressed"/>
             <Button Content="Add new list" Click="AddList" FontSize="18"/>
         </StackPanel>
 

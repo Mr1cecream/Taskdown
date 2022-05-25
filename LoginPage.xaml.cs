@@ -1,7 +1,6 @@
 ﻿using Isopoh.Cryptography.Argon2;
 using Microsoft.Data.Sqlite;
 using System;
-using System.IO;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -72,8 +71,7 @@ namespace Taskdown
             getUser.Parameters.AddWithValue("@Username", username);
 
             bool success = false;
-            string dbpath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbpath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.dbPath}"))
             {
                 connection.Open();
                 getUser.Connection = connection;
