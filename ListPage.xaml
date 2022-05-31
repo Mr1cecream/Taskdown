@@ -89,11 +89,15 @@
             </Grid>
 
             <Grid x:Name="TextBoxGrid" Grid.Row="1">
-                <controls:MarkdownTextBlock x:Name="MdTextbox" Text="# Welcome to Taskdown!"
-                                            TextWrapping="WrapWholeWords" Padding="5" 
-                                            WrapCodeBlock="True"/>
                 <TextBox x:Name="LiteralTexbox" AcceptsReturn="True" Visibility="Collapsed"
-                         TextWrapping="Wrap" Padding="5"/>
+                         TextWrapping="Wrap" Padding="5"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                <ScrollViewer x:Name="MdScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+                    <controls:MarkdownTextBlock x:Name="MdTextbox" Text="{Binding ElementName=LiteralTexbox, Path=Text}"
+                                            Padding="5" 
+                                            WrapCodeBlock="True"/>
+                </ScrollViewer>
             </Grid>
 
             <Grid.RowDefinitions>

@@ -24,13 +24,17 @@ namespace Taskdown
         {
             this.InitializeComponent();
             PageReferences.ListPage = this;
-            MdTextbox.Text =
+            LiteralTexbox.Text =
 @"# Welcome to Taskdown!
 This area is where you write and view your tasks in markdown form.
+
 On the top, you will see a few buttons - those are controls for your task.
+
 To switch to editing mode, press the 'Switch to Editing Mode' button on the top.
+
 To switch back to reading mode, press the same button, now labeled
 'Switch to Reading Mode'.
+
 Select a task from the list on the left or create a new one on the top
 to begin marking down your tasks!";
         }
@@ -108,7 +112,7 @@ to begin marking down your tasks!";
             if (currentTaskId == null) return;
             if (inEditingMode)
                 ReadingMode();
-            if (currentTaskContent == MdTextbox.Text) return;
+            if (currentTaskContent == LiteralTexbox.Text) return;
             var command = new SqliteCommand
             {
                 CommandText = "UPDATE tasks SET markdown=@Markdown WHERE guid=@Guid"
@@ -138,9 +142,9 @@ to begin marking down your tasks!";
                     TaskNameTextBox.Text = reader.GetString(0);
                     TaskDescTextBox.Text = reader.GetString(1);
                     if (reader.IsDBNull(2))
-                        currentTaskContent = MdTextbox.Text = "";
+                        currentTaskContent = LiteralTexbox.Text = "";
                     else
-                        currentTaskContent = MdTextbox.Text = reader.GetString(2);
+                        currentTaskContent = LiteralTexbox.Text = reader.GetString(2);
                     currentTaskCompleted = reader.GetBoolean(3);
                     UpdateCompleteBtn();
                 }
@@ -165,17 +169,15 @@ to begin marking down your tasks!";
 
         private void EditingMode()
         {
-            LiteralTexbox.Text = MdTextbox.Text;
-            MdTextbox.Visibility = Visibility.Collapsed;
+            MdScrollViewer.Visibility = Visibility.Collapsed;
             LiteralTexbox.Visibility = Visibility.Visible;
             SwitchModeBtn.Content = "Switch to Reading Mode";
         }
 
         private void ReadingMode()
         {
-            MdTextbox.Text = LiteralTexbox.Text;
             LiteralTexbox.Visibility = Visibility.Collapsed;
-            MdTextbox.Visibility = Visibility.Visible;
+            MdScrollViewer.Visibility = Visibility.Visible;
             SwitchModeBtn.Content = "Switch to Editing Mode";
         }
 
