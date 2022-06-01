@@ -16,15 +16,14 @@ namespace Taskdown
             PageReferences.AppPage = this;
             SidePanelFrame.Navigate(typeof(SidePanel));
         }
-
+        /// <summary>
+        /// Task list was selected in side panel
+        /// </summary>
+        /// <param name="listName"></param>
         public void ListSelected(string listName)
         {
             AppFrame.Navigate(typeof(ListPage));
             PageReferences.ListPage.GenerateList(listName);
-        }
-        public void NavigateTo(Type dest)
-        {
-            this.AppFrame.Navigate(dest);
         }
     }
 }

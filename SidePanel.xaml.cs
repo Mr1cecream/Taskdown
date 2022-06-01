@@ -13,7 +13,10 @@ namespace Taskdown
     /// </summary>
     public sealed partial class SidePanel : Page
     {
-        private ObservableCollection<String> lists;
+        /// <summary>
+        /// Collection of task lists to display on side panel
+        /// </summary>
+        private ObservableCollection<string> lists;
         public SidePanel()
         {
             this.InitializeComponent();
@@ -22,10 +25,14 @@ namespace Taskdown
             RefreshLists();
             Lists.ItemsSource = lists;
         }
-
-        private ObservableCollection<String> GetLists(Guid userGuid)
+        /// <summary>
+        /// Get collection of task lists
+        /// </summary>
+        /// <param name="userGuid">GUID of user</param>
+        /// <returns>Collection of task lists</returns>
+        private ObservableCollection<string> GetLists(Guid userGuid)
         {
-            ObservableCollection<String> list = new ObservableCollection<String>();
+            ObservableCollection<string> list = new ObservableCollection<String>();
             var command = new SqliteCommand
             {
                 CommandText = "SELECT list FROM tasks WHERE userguid=@UserGuid"
@@ -48,25 +55,40 @@ namespace Taskdown
             return list;
         }
 
+        /// <summary>
+        /// Refresh displayed task lists
+        /// </summary>
         private void RefreshLists() =>
             lists = GetLists((Guid)PageReferences.MainPage.UserGuid);
 
+        /// <summary>
+        /// Forward to app page when task list was selected
+        /// </summary>
         public void ListSelected(object sender, RoutedEventArgs e)
         {
             var li = (string)Lists.SelectedItem;
             PageReferences.AppPage.ListSelected(li);
         }
 
+        /// <summary>
+        /// Quit app
+        /// </summary>
         public void Quit(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
 
+        /// <summary>
+        /// Show settings
+        /// </summary>
         public void Settings(object sender, RoutedEventArgs e)
         {
             //PageReferences.AppPage.NavigateTo(typeof(SettingsPage));
         }
 
+        /// <summary>
+        /// Add a new list
+        /// </summary>
         private void AddList(object sender, RoutedEventArgs e)
         {
             string name = NewListTextbox.Text;
@@ -77,12 +99,16 @@ namespace Taskdown
             lists.Add(name);
             NewListTextbox.Text = string.Empty;
         }
-
+        /// <summary>
+        /// Log out
+        /// </summary>
         private void Logout(object sender, RoutedEventArgs e)
         {
             PageReferences.MainPage.Logout();
         }
-
+        /// <summary>
+        /// Enter pressed in text box
+        /// </summary>
         private void EnterPressed(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
         {
             if (e.Key != Windows.System.VirtualKey.Enter) return;

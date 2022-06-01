@@ -24,7 +24,7 @@
                     <TextBox x:Name="UsernameTextbox" FontSize="40" AcceptsReturn="False" 
                              MinWidth="350" PlaceholderText="Enter Username" TextAlignment="Left"
                              TextChanged="UsernameChanged" 
-                             KeyDown="ReturnPressed" Tag="Username"/>
+                             KeyDown="EnterPressed" Tag="Username"/>
                 </StackPanel>
                 <TextBlock x:Name="UsernameError" Foreground="Red" FontSize="16" 
                            Visibility="Collapsed"/>
@@ -39,11 +39,11 @@
                         <PasswordBox x:Name="PasswordTextbox" FontSize="40" MinWidth="350"
                              PlaceholderText="Enter Password" Margin="0,0,0,10"
                              PasswordChanged="PasswordChanged"
-                                     KeyDown="ReturnPressed" Tag="Password"/>
+                                     KeyDown="EnterPressed" Tag="Password"/>
                         <PasswordBox x:Name="ConfirmTextbox" FontSize="40" MinWidth="350"
                              PlaceholderText="Confirm Password" Visibility="Collapsed"
                                  PasswordChanged="PasswordChanged"
-                                     KeyDown="ReturnPressed" Tag="Confirm"/>
+                                     KeyDown="EnterPressed" Tag="Confirm"/>
                     </StackPanel>
                 </StackPanel>
                 <TextBlock x:Name="PasswordError" Foreground="Red" FontSize="16" 

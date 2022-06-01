@@ -10,6 +10,9 @@ namespace Taskdown
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        /// <summary>
+        /// GUID of current user
+        /// </summary>
         public Guid? UserGuid { get; set; }
         public MainPage()
         {
@@ -17,12 +20,16 @@ namespace Taskdown
             PageReferences.MainPage = this;
             TopFrame.Navigate(typeof(LoginPage));
         }
-
+        /// <summary>
+        /// Change to app page
+        /// </summary>
         public void Login()
         {
             TopFrame.Navigate(typeof(AppPage));
         }
-
+        /// <summary>
+        /// Change back to login page
+        /// </summary>
         public void Logout()
         {
             UserGuid = null;
