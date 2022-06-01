@@ -13,12 +13,17 @@ namespace Taskdown
     /// </summary>
     public sealed partial class LoginPage : Page
     {
+        /// <summary>
+        /// Whether user is creating an account or using an existing one
+        /// </summary>
         private bool createAccount = false;
         public LoginPage()
         {
             this.InitializeComponent();
         }
-
+        /// <summary>
+        /// Login button was pressed
+        /// </summary>
         private void LoginButton(object sender, RoutedEventArgs e)
         {
             string username = UsernameTextbox.Text;
@@ -61,7 +66,12 @@ namespace Taskdown
             }
             PageReferences.MainPage.Login();
         }
-
+        /// <summary>
+        /// Log into an account
+        /// </summary>
+        /// <param name="username">Username</param>
+        /// <param name="password">Password</param>
+        /// <returns></returns>
         private bool Login(string username, string password)
         {
             SqliteCommand getUser = new SqliteCommand
@@ -93,7 +103,12 @@ namespace Taskdown
                 ShowUsernameError("User does not exist!");
             return success;
         }
-
+        /// <summary>
+        /// Create an account
+        /// </summary>
+        /// <param name="username">Username</param>
+        /// <param name="password">Password</param>
+        /// <returns></returns>
         private bool CreateAccount(string username, string password)
         {
             SqliteCommand userExistsCmd = new SqliteCommand
@@ -119,7 +134,9 @@ namespace Taskdown
 
             return Login(username, password);
         }
-
+        /// <summary>
+        /// Switch between account creating and log in
+        /// </summary>
         private void CreateAccount(object sender, RoutedEventArgs e)
         {
             if (!createAccount)
@@ -137,7 +154,11 @@ namespace Taskdown
                 LoginBtn.Content = "Login";
             }
         }
-
+        /// <summary>
+        /// Validate a username or password string
+        /// </summary>
+        /// <param name="str">String to check</param>
+        /// <returns>Whether a string does not contain prohibited characters</returns>
         private bool Validate(string str)
         {
             foreach (char c in str)
@@ -145,29 +166,43 @@ namespace Taskdown
                     return false;
             return true;
         }
-
+        /// <summary>
+        /// Show error text under username box
+        /// </summary>
+        /// <param name="errorText">Error text to display</param>
         private void ShowUsernameError(string errorText)
         {
             UsernameError.Text = errorText;
             UsernameError.Visibility = Visibility.Visible;
         }
-
+        /// <summary>
+        /// Show error text under password box
+        /// </summary>
+        /// <param name="errorText">Error text to display</param>
         private void ShowPasswordError(string errorText)
         {
             PasswordError.Text = errorText;
             PasswordError.Visibility = Visibility.Visible;
         }
+        /// <summary>
+        /// Username box content changed, reset error text
+        /// </summary>
         private void UsernameChanged(object sender, TextChangedEventArgs e)
         {
             UsernameError.Visibility = Visibility.Collapsed;
         }
-
+        /// <summary>
+        /// Password box content changed, reset error text
+        /// </summary>
         private void PasswordChanged(object sender, RoutedEventArgs e)
         {
             PasswordError.Visibility = Visibility.Collapsed;
         }
-
-        private void ReturnPressed(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        /// <summary>
+        /// Enter pressed, shortcut to next input or login button
+        /// </summary>
+        /// <param name="sender">Object from which enter was pressed</param>
+        private void EnterPressed(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
         {
             if (e.Key != Windows.System.VirtualKey.Enter) return;
             switch ((sender as Control).Tag.ToString())

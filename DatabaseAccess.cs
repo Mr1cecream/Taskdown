@@ -7,7 +7,13 @@ namespace Taskdown
 {
     internal class DatabaseAccess
     {
+        /// <summary>
+        /// Path to database
+        /// </summary>
         public static string dbPath { get; private set; }
+        /// <summary>
+        /// Create (if doesn't exist) and connect to database
+        /// </summary>
         public async static void InitializeDatabase()
         {
             await ApplicationData.Current.LocalFolder.CreateFileAsync("database.db", CreationCollisionOption.OpenIfExists);
@@ -54,7 +60,10 @@ completed INTEGER NOT NULL);";
                 connection.Close();
             }
         }
-
+        /// <summary>
+        /// Execute a non-query command
+        /// </summary>
+        /// <param name="command">Command to execute</param>
         public static void ExecuteNonQuery(SqliteCommand command)
         {
             using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
@@ -65,7 +74,11 @@ completed INTEGER NOT NULL);";
                 connection.Close();
             }
         }
-
+        /// <summary>
+        /// Execute a scalar command
+        /// </summary>
+        /// <param name="command">Command to execute</param>
+        /// <returns>Value from scalar</returns>
         public static object ExecuteScalar(SqliteCommand command)
         {
             object value = null;
