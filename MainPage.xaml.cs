@@ -14,12 +14,14 @@ namespace Taskdown
         /// GUID of current user
         /// </summary>
         public Guid? UserGuid { get; set; }
+
         public MainPage()
         {
             this.InitializeComponent();
             PageReferences.MainPage = this;
             TopFrame.Navigate(typeof(LoginPage));
         }
+
         /// <summary>
         /// Change to app page
         /// </summary>
@@ -27,6 +29,7 @@ namespace Taskdown
         {
             TopFrame.Navigate(typeof(AppPage));
         }
+
         /// <summary>
         /// Change back to login page
         /// </summary>

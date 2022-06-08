@@ -17,6 +17,7 @@ namespace Taskdown
         /// Collection of task lists to display on side panel
         /// </summary>
         private ObservableCollection<string> lists;
+
         public SidePanel()
         {
             this.InitializeComponent();
@@ -25,6 +26,7 @@ namespace Taskdown
             RefreshLists();
             Lists.ItemsSource = lists;
         }
+
         /// <summary>
         /// Get collection of task lists
         /// </summary>
@@ -32,13 +34,13 @@ namespace Taskdown
         /// <returns>Collection of task lists</returns>
         private ObservableCollection<string> GetLists(Guid userGuid)
         {
-            ObservableCollection<string> list = new ObservableCollection<String>();
+            ObservableCollection<string> list = new ObservableCollection<string>();
             var command = new SqliteCommand
             {
                 CommandText = "SELECT list FROM tasks WHERE userguid=@UserGuid"
             };
             command.Parameters.AddWithValue("@UserGuid", userGuid);
-            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.dbPath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.DbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -99,6 +101,7 @@ namespace Taskdown
             lists.Add(name);
             NewListTextbox.Text = string.Empty;
         }
+
         /// <summary>
         /// Log out
         /// </summary>
@@ -106,6 +109,7 @@ namespace Taskdown
         {
             PageReferences.MainPage.Logout();
         }
+
         /// <summary>
         /// Enter pressed in text box
         /// </summary>

@@ -10,15 +10,16 @@ namespace Taskdown
         /// <summary>
         /// Path to database
         /// </summary>
-        public static string dbPath { get; private set; }
+        public static string DbPath { get; private set; }
+
         /// <summary>
         /// Create (if doesn't exist) and connect to database
         /// </summary>
-        public async static void InitializeDatabase()
+        public static async void InitializeDatabase()
         {
             await ApplicationData.Current.LocalFolder.CreateFileAsync("database.db", CreationCollisionOption.OpenIfExists);
-            dbPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
+            DbPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "database.db");
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DbPath}"))
             {
                 connection.Open();
                 string usersTableCmdStr =
@@ -44,10 +45,14 @@ completed INTEGER NOT NULL);";
             }
         }
 
-        // template only, do not call
+        /// <summary>
+        /// Execute a non-query command
+        /// </summary>
+        /// <param name="command">Command to execute</param>
+        // NOTE: template only, do not call
         private static void ExecuteReader(SqliteCommand command)
         {
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -60,13 +65,14 @@ completed INTEGER NOT NULL);";
                 connection.Close();
             }
         }
+
         /// <summary>
         /// Execute a non-query command
         /// </summary>
         /// <param name="command">Command to execute</param>
         public static void ExecuteNonQuery(SqliteCommand command)
         {
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -74,6 +80,7 @@ completed INTEGER NOT NULL);";
                 connection.Close();
             }
         }
+
         /// <summary>
         /// Execute a scalar command
         /// </summary>
@@ -82,7 +89,7 @@ completed INTEGER NOT NULL);";
         public static object ExecuteScalar(SqliteCommand command)
         {
             object value = null;
-            using (SqliteConnection connection = new SqliteConnection($"Filename={dbPath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;

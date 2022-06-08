@@ -17,10 +17,12 @@ namespace Taskdown
         /// Whether user is creating an account or using an existing one
         /// </summary>
         private bool createAccount = false;
+
         public LoginPage()
         {
             this.InitializeComponent();
         }
+
         /// <summary>
         /// Login button was pressed
         /// </summary>
@@ -66,6 +68,7 @@ namespace Taskdown
             }
             PageReferences.MainPage.Login();
         }
+
         /// <summary>
         /// Log into an account
         /// </summary>
@@ -81,7 +84,7 @@ namespace Taskdown
             getUser.Parameters.AddWithValue("@Username", username);
 
             bool success = false;
-            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.dbPath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.DbPath}"))
             {
                 connection.Open();
                 getUser.Connection = connection;
@@ -103,6 +106,7 @@ namespace Taskdown
                 ShowUsernameError("User does not exist!");
             return success;
         }
+
         /// <summary>
         /// Create an account
         /// </summary>
@@ -134,6 +138,7 @@ namespace Taskdown
 
             return Login(username, password);
         }
+
         /// <summary>
         /// Switch between account creating and log in
         /// </summary>
@@ -154,6 +159,7 @@ namespace Taskdown
                 LoginBtn.Content = "Login";
             }
         }
+
         /// <summary>
         /// Validate a username or password string
         /// </summary>
@@ -166,6 +172,7 @@ namespace Taskdown
                     return false;
             return true;
         }
+
         /// <summary>
         /// Show error text under username box
         /// </summary>
@@ -175,6 +182,7 @@ namespace Taskdown
             UsernameError.Text = errorText;
             UsernameError.Visibility = Visibility.Visible;
         }
+
         /// <summary>
         /// Show error text under password box
         /// </summary>
@@ -184,6 +192,7 @@ namespace Taskdown
             PasswordError.Text = errorText;
             PasswordError.Visibility = Visibility.Visible;
         }
+
         /// <summary>
         /// Username box content changed, reset error text
         /// </summary>
@@ -191,6 +200,7 @@ namespace Taskdown
         {
             UsernameError.Visibility = Visibility.Collapsed;
         }
+
         /// <summary>
         /// Password box content changed, reset error text
         /// </summary>
@@ -198,6 +208,7 @@ namespace Taskdown
         {
             PasswordError.Visibility = Visibility.Collapsed;
         }
+
         /// <summary>
         /// Enter pressed, shortcut to next input or login button
         /// </summary>
@@ -210,15 +221,18 @@ namespace Taskdown
                 case "Username":
                     PasswordTextbox.Focus(FocusState.Programmatic);
                     break;
+
                 case "Password":
                     if (createAccount)
                         ConfirmTextbox.Focus(FocusState.Programmatic);
                     else
                         LoginButton(null, null);
                     break;
+
                 case "Confirm":
                     LoginButton(null, null);
                     break;
+
                 default:
                     break;
             }

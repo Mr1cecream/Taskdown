@@ -14,34 +14,34 @@
             <StackPanel Orientation="Vertical">
                 <TextBox x:Name="NewTaskName" MinWidth="250"
                          PlaceholderText="Enter New Task Name"
-                         FontSize="18"/>
+                         FontSize="18" />
                 <TextBox x:Name="NewTaskDesc"
                          PlaceholderText="Enter New Task Description"
-                         FontSize="18"/>
+                         FontSize="18" />
 
-                <Button Content="Add Task" Click="NewTask" FontSize="18"/>
+                <Button Content="Add Task" Click="NewTask" FontSize="18" />
             </StackPanel>
             <Border BorderThickness="0,0,1,0" BorderBrush="LightGray">
-                <ListView x:Name="TaskList" SelectionMode="Single" 
+                <ListView x:Name="TaskList" SelectionMode="Single"
                       SelectionChanged="TaskSelected" IsItemClickEnabled="False">
                     <ListViewItem>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="Basic UI"/>
-                            <TextBlock Text="Do the basic UI" 
-                                   Foreground="DimGray" FontSize="14"/>
+                            <TextBlock Text="Basic UI" />
+                            <TextBlock Text="Do the basic UI"
+                                   Foreground="DimGray" FontSize="14" />
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Content="Dynamic UI"/>
-                    <ListViewItem Content="Local Database" Background="LightGreen"/>
-                    <ListViewItem Content="Web API and Remote Database"/>
+                    <ListViewItem Content="Dynamic UI" />
+                    <ListViewItem Content="Local Database" Background="LightGreen" />
+                    <ListViewItem Content="Web API and Remote Database" />
 
                     <ListView.Resources>
                         <Style TargetType="ListViewItem">
-                            <Setter Property="MinHeight" Value="80"/>
-                            <Setter Property="FontSize" Value="16"/>
-                            <Setter Property="Foreground" Value="CornflowerBlue"/>
-                            <Setter Property="FontFamily" Value="Comic Sans MS"/>
-                            <Setter Property="CornerRadius" Value="5"/>
+                            <Setter Property="MinHeight" Value="80" />
+                            <Setter Property="FontSize" Value="16" />
+                            <Setter Property="Foreground" Value="CornflowerBlue" />
+                            <Setter Property="FontFamily" Value="Comic Sans MS" />
+                            <Setter Property="CornerRadius" Value="5" />
                         </Style>
                     </ListView.Resources>
                 </ListView>
@@ -53,26 +53,26 @@
                 <Grid Margin="5">
                     <TextBox x:Name="TaskNameTextBox" Text="Welcome to Taskdown!"
                              TextChanged="TaskChanged" Tag="Name"
-                           Foreground="DarkSlateGray" FontSize="24" 
-                             PlaceholderText="Task Name" Padding="5" Margin="0,0,0,5"/>
-                    <TextBox x:Name="TaskDescTextBox" Text="Taskdown is a task managment program for Windows 10/11 with Markdown support!" 
+                           Foreground="DarkSlateGray" FontSize="24"
+                             PlaceholderText="Task Name" Padding="5" Margin="0,0,0,5" />
+                    <TextBox x:Name="TaskDescTextBox" Text="Taskdown is a task managment program for Windows 10/11 with Markdown support!"
                              TextChanged="TaskChanged" Grid.Row="1" Tag="Description"
                            Foreground="SlateGray" FontSize="24" Padding="5"
-                           PlaceholderText="Task Description" TextWrapping="Wrap"/>
+                           PlaceholderText="Task Description" TextWrapping="Wrap" />
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="2*" />
                     </Grid.RowDefinitions>
                 </Grid>
-                <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Right" 
+                <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Right"
                             Padding="0, 10, 10, 0">
-                    <Button x:Name="SwitchModeBtn" Content="Switch to Editing Mode" 
-                        Click="SwitchMode" HorizontalAlignment="Center"/>
-                    <Button x:Name="SaveBtn" Content="Save Task" 
-                        Click="SaveTask" HorizontalAlignment="Center"/>
-                    <Button x:Name="CompleteBtn" Content="Mark as Completed" 
-                        Click="CompleteTask" HorizontalAlignment="Center"/>
-                    <Button x:Name="DeleteBtn" Content="Delete Task" 
+                    <Button x:Name="SwitchModeBtn" Content="Switch to Editing Mode"
+                        Click="SwitchMode" HorizontalAlignment="Center" />
+                    <Button x:Name="SaveBtn" Content="Save Task"
+                        Click="SaveTask" HorizontalAlignment="Center" />
+                    <Button x:Name="CompleteBtn" Content="Mark as Completed"
+                        Click="CompleteTask" HorizontalAlignment="Center" />
+                    <Button x:Name="DeleteBtn" Content="Delete Task"
                         Click="DeleteTask" HorizontalAlignment="Center"
                             Background="Red" Foreground="White">
                         <!--<Button.Resources>
@@ -92,11 +92,11 @@
                 <TextBox x:Name="LiteralTexbox" AcceptsReturn="True" Visibility="Collapsed"
                          TextWrapping="Wrap" Padding="5"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                         ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                         ScrollViewer.VerticalScrollBarVisibility="Auto" />
                 <ScrollViewer x:Name="MdScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
                     <controls:MarkdownTextBlock x:Name="MdTextbox" Text="{Binding ElementName=LiteralTexbox, Path=Text}"
-                                            Padding="5" 
-                                            WrapCodeBlock="True"/>
+                                            Padding="5"
+                                            WrapCodeBlock="True" />
                 </ScrollViewer>
             </Grid>
 

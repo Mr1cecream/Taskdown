@@ -18,26 +18,32 @@ namespace Taskdown
         /// Whether currently in editing mode
         /// </summary>
         private bool inEditingMode = false;
+
         /// <summary>
         /// Name of current task list
         /// </summary>
         private string listName;
+
         /// <summary>
         /// Collection of tasks
         /// </summary>
-        private ObservableCollection<ListViewItem> list = new ObservableCollection<ListViewItem>();
+        private readonly ObservableCollection<ListViewItem> list = new ObservableCollection<ListViewItem>();
+
         /// <summary>
         /// GUID of current task
         /// </summary>
         private Guid currentTaskId;
+
         /// <summary>
         /// Whether current task is marked as completed
         /// </summary>
         private bool currentTaskCompleted;
+
         /// <summary>
         /// Content of current task before it was edited
         /// </summary>
         private string currentTaskContent;
+
         public ListPage()
         {
             this.InitializeComponent();
@@ -56,6 +62,7 @@ To switch back to reading mode, press the same button, now labeled
 Select a task from the list on the left or create a new one on the top
 to begin marking down your tasks!";
         }
+
         /// <summary>
         /// Generate a list of tasks
         /// </summary>
@@ -65,6 +72,7 @@ to begin marking down your tasks!";
             this.listName = listName;
             GenerateList();
         }
+
         /// <summary>
         /// Generate a list of tasks
         /// </summary>
@@ -77,7 +85,7 @@ to begin marking down your tasks!";
             command.Parameters.AddWithValue("@UserGuid", PageReferences.MainPage.UserGuid);
             command.Parameters.AddWithValue("@List", listName);
             list.Clear();
-            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.dbPath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.DbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -92,6 +100,7 @@ to begin marking down your tasks!";
             }
             TaskList.ItemsSource = list;
         }
+
         /// <summary>
         /// Generate a task UI element
         /// </summary>
@@ -137,6 +146,7 @@ to begin marking down your tasks!";
 
             return li;
         }
+
         /// <summary>
         /// Save content of current task
         /// </summary>
@@ -154,6 +164,7 @@ to begin marking down your tasks!";
             command.Parameters.AddWithValue("@Guid", currentTaskId);
             DatabaseAccess.ExecuteNonQuery(command);
         }
+
         /// <summary>
         /// Task was selected from list of tasks, show it in editing pane
         /// </summary>
@@ -169,7 +180,7 @@ to begin marking down your tasks!";
                 CommandText = "SELECT name, description, markdown, completed FROM tasks WHERE guid=@Guid"
             };
             command.Parameters.AddWithValue("@Guid", taskId);
-            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.dbPath}"))
+            using (SqliteConnection connection = new SqliteConnection($"Filename={DatabaseAccess.DbPath}"))
             {
                 connection.Open();
                 command.Connection = connection;
@@ -190,6 +201,7 @@ to begin marking down your tasks!";
             }
             currentTaskId = taskId;
         }
+
         /// <summary>
         /// Switch between editing and reading mode
         /// </summary>
@@ -205,6 +217,7 @@ to begin marking down your tasks!";
             }
             inEditingMode = !inEditingMode;
         }
+
         /// <summary>
         /// Switch to editing mode
         /// </summary>
@@ -214,6 +227,7 @@ to begin marking down your tasks!";
             LiteralTexbox.Visibility = Visibility.Visible;
             SwitchModeBtn.Content = "Switch to Reading Mode";
         }
+
         /// <summary>
         /// Switch to reading mode
         /// </summary>
@@ -223,6 +237,7 @@ to begin marking down your tasks!";
             MdScrollViewer.Visibility = Visibility.Visible;
             SwitchModeBtn.Content = "Switch to Editing Mode";
         }
+
         /// <summary>
         /// Add a new task
         /// </summary>
@@ -243,6 +258,7 @@ to begin marking down your tasks!";
             GenerateList();
             NewTaskName.Text = string.Empty; NewTaskDesc.Text = string.Empty;
         }
+
         /// <summary>
         /// Delete the current task
         /// </summary>
@@ -256,6 +272,7 @@ to begin marking down your tasks!";
             DatabaseAccess.ExecuteNonQuery(command);
             GenerateList();
         }
+
         /// <summary>
         /// Mark current task as completed
         /// </summary>
@@ -282,6 +299,7 @@ to begin marking down your tasks!";
             currentTaskCompleted = !currentTaskCompleted;
             UpdateCompleteBtn();
         }
+
         /// <summary>
         /// Change text of mark as completed/uncompleted button
         /// </summary>
@@ -296,6 +314,7 @@ to begin marking down your tasks!";
                 CompleteBtn.Content = "Mark Task as Completed";
             }
         }
+
         /// <summary>
         /// Save task content button pressed
         /// </summary>
@@ -303,6 +322,7 @@ to begin marking down your tasks!";
         {
             SaveTask();
         }
+
         /// <summary>
         /// Name or description of task changed, update
         /// </summary>
@@ -316,10 +336,12 @@ to begin marking down your tasks!";
                     columnChanged = "name";
                     newContent = TaskNameTextBox.Text;
                     break;
+
                 case "Description":
                     columnChanged = "description";
                     newContent = TaskDescTextBox.Text;
                     break;
+
                 default:
                     return;
             }

@@ -1,5 +1,4 @@
-﻿using System;
-using Windows.UI.Xaml.Controls;
+﻿using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -16,6 +15,7 @@ namespace Taskdown
             PageReferences.AppPage = this;
             SidePanelFrame.Navigate(typeof(SidePanel));
         }
+
         /// <summary>
         /// Task list was selected in side panel
         /// </summary>
