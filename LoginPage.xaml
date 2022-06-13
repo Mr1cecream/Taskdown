@@ -10,10 +10,10 @@
 
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <Image Source="Assets/SplashScreen.scale-200.png"/>
+            <Image Source="Assets/SplashScreen.scale-200.png" />
             <StackPanel Orientation="Vertical" Padding="0, 25, 0, 0">
-                <TextBlock Text="Welcome to -" FontSize="32" Padding="60,0,0,0"/>
-                <TextBlock Text="Taskdown" FontSize="60" FontWeight="Bold" Padding="80,0,0,0"/>
+                <TextBlock Text="Welcome to -" FontSize="32" Padding="60,0,0,0" />
+                <TextBlock Text="Taskdown" FontSize="60" FontWeight="Bold" Padding="80,0,0,0" />
             </StackPanel>
         </StackPanel>
 
@@ -22,46 +22,45 @@
                         HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Username: " FontSize="40" Padding="0,0,20,0"
-                               />
-                    <TextBox x:Name="UsernameTextbox" FontSize="40" AcceptsReturn="False" 
+                    <TextBlock Text="Username: " FontSize="40" Padding="0,0,20,0" />
+                    <TextBox x:Name="UsernameTextbox" FontSize="40" AcceptsReturn="False"
                              MinWidth="350" PlaceholderText="Enter Username" TextAlignment="Left"
-                             TextChanged="UsernameChanged" 
-                             KeyDown="EnterPressed" Tag="Username"/>
+                             TextChanged="UsernameChanged"
+                             KeyDown="EnterPressed" Tag="Username" />
                 </StackPanel>
-                <TextBlock x:Name="UsernameError" Foreground="Red" FontSize="16" 
-                           Visibility="Collapsed"/>
+                <TextBlock x:Name="UsernameError" Foreground="Red" FontSize="16"
+                           Visibility="Collapsed" />
             </StackPanel>
 
             <StackPanel Orientation="Vertical" Grid.Row="2"
                         HorizontalAlignment="Center" VerticalAlignment="Center">
-                <StackPanel Orientation="Horizontal" 
+                <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Password: " FontSize="40" Padding="0,0,20,0"/>
+                    <TextBlock Text="Password: " FontSize="40" Padding="0,0,20,0" />
                     <StackPanel Orientation="Vertical">
                         <PasswordBox x:Name="PasswordTextbox" FontSize="40" MinWidth="350"
                              PlaceholderText="Enter Password" Margin="0,0,0,10"
                              PasswordChanged="PasswordChanged"
-                                     KeyDown="EnterPressed" Tag="Password"/>
+                                     KeyDown="EnterPressed" Tag="Password" />
                         <PasswordBox x:Name="ConfirmTextbox" FontSize="40" MinWidth="350"
                              PlaceholderText="Confirm Password" Visibility="Collapsed"
                                  PasswordChanged="PasswordChanged"
-                                     KeyDown="EnterPressed" Tag="Confirm"/>
+                                     KeyDown="EnterPressed" Tag="Confirm" />
                     </StackPanel>
                 </StackPanel>
-                <TextBlock x:Name="PasswordError" Foreground="Red" FontSize="16" 
-                           Visibility="Collapsed"/>
+                <TextBlock x:Name="PasswordError" Foreground="Red" FontSize="16"
+                           Visibility="Collapsed" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Grid.Row="4"
                         HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="LoginBtn" Content="Sign In" FontSize="50" 
+                <Button x:Name="LoginBtn" Content="Sign In" FontSize="50"
                         Margin="0,0,20,0" Background="LimeGreen"
                         Click="LoginButton" Foreground="WhiteSmoke"
-                        Padding="8"/>
+                        Padding="8" />
                 <Button x:Name="CreateBtn" Content="Create Account" FontSize="50"
                         Background="DodgerBlue" Foreground="WhiteSmoke"
-                        Click="CreateAccount" Padding="8"/>
+                        Click="CreateAccount" Padding="8" />
             </StackPanel>
 
             <Grid.RowDefinitions>
@@ -73,8 +72,8 @@
             </Grid.RowDefinitions>
         </Grid>
 
-        <TextBlock Grid.Row="3" Text="Made by Guy Ochakovsky." 
-                   VerticalAlignment="Bottom" Margin="20, 20" FontSize="24"/>
+        <TextBlock Grid.Row="3" Text="Made by Guy Ochakovsky."
+                   VerticalAlignment="Bottom" Margin="20, 20" FontSize="24" />
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="3*" />

@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Frame x:Name="SidePanelFrame"/>
+        <Frame x:Name="SidePanelFrame" />
 
-        <Frame x:Name="AppFrame" Grid.Column="1"/>
+        <Frame x:Name="AppFrame" Grid.Column="1" />
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" MinWidth="280" />
