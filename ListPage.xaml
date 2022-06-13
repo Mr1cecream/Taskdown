@@ -96,7 +96,8 @@
                 <ScrollViewer x:Name="MdScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
                     <controls:MarkdownTextBlock x:Name="MdTextbox" Text="{Binding ElementName=LiteralTexbox, Path=Text}"
                                             Padding="5" 
-                                            WrapCodeBlock="True"/>
+                                            WrapCodeBlock="True" CodeBackground="LightGray"
+                                                UriPrefix="ms-appx://"/>
                 </ScrollViewer>
             </Grid>
 

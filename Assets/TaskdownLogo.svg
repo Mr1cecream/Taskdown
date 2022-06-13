@@ -2,16 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1240mm"
-   height="600mm"
-   viewBox="0 0 1240 600"
+   width="1550mm"
+   height="750mm"
+   viewBox="0 0 1550 750"
    version="1.1"
    id="svg5"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    sodipodi:docname="TaskdownLogo.svg"
-   inkscape:export-filename="SplashScreen.scale-200.png"
-   inkscape:export-xdpi="76.199997"
-   inkscape:export-ydpi="76.199997"
+   inkscape:export-filename="Wide310x150Logo.scale-200.png"
+   inkscape:export-xdpi="5.0799999"
+   inkscape:export-ydpi="5.0799999"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.13055262"
-     inkscape:cx="1570.2481"
-     inkscape:cy="911.50989"
+     inkscape:zoom="0.18462928"
+     inkscape:cx="2431.9003"
+     inkscape:cy="1424.4761"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -73,17 +73,17 @@
        id="rect63"
        width="559.54388"
        height="553.98785"
-       x="254.88661"
-       y="30.210674"
+       x="409.8866"
+       y="105.21068"
        rx="79.079727"
        ry="78.294487" />
     <path
        style="fill:none;stroke:#1a1a1a;stroke-width:38.7707;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:normal"
-       d="M 310.91495,410.68618 413.70202,550.97663 876.24351,27.318171"
+       d="M 465.91495,485.68618 568.70202,625.97663 1031.2435,102.31817"
        id="path957" />
     <path
        style="fill:none;stroke:#1a1a1a;stroke-width:20.9505;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#RoundedArrow)"
-       d="M 930.85863,31.380461 V 492.17231"
+       d="M 1085.8586,106.38046 V 567.17231"
        id="path1738" />
   </g>
 </svg>
